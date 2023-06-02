@@ -3,6 +3,7 @@ title: Hopeful Final Test
 bookAuthor: Lorem Ipsum
 description: naommap
 pubDate: 2023-06-02T17:54:52.911Z
+heroImage: /book-covers/roadtrip-poster.jpg
 affiliateLink: https://uiuiuiui
 youTubeLink: https://uiuiuiui
 spotifyLink: https://uiuiuiui
