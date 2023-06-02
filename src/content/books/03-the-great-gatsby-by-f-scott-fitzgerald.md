@@ -1,14 +1,21 @@
 ---
-title: "The Great Gatsby"
-bookAuthor: "F. Scott Fitzgerald"
-description: "'The Great Gatsby', a novel that has been dissected and analyzed more times than a frog in a high school biology class. But what makes this book worthy of such scrutiny? Is it the quintessential representation of the Jazz Age? Sure. Is it a powerful exploration of the American Dream? Absolutely. But let's not forget the drama, the scandal, and the glitz and glam that make this book such a delightful romp through the pages of history. So buckle up, dear readers, as we delve into the world of the 1920s and the enigmatic Jay Gatsby himself."
-pubDate: "Jun 01 2023"
-heroImage: "/book-covers/3-the-great-gatsby-by-f-scott-fitzgerald.jpg"
+title: The Great Gatsby
+bookAuthor: F. Scott Fitzgerald
+description: "'The Great Gatsby', a novel that has been dissected and analyzed
+  more times than a frog in a high school biology class. But what makes this
+  book worthy of such scrutiny? Is it the quintessential representation of the
+  Jazz Age? Sure. Is it a powerful exploration of the American Dream?
+  Absolutely. But let's not forget the drama, the scandal, and the glitz and
+  glam that make this book such a delightful romp through the pages of history.
+  So buckle up, dear readers, as we delve into the world of the 1920s and the
+  enigmatic Jay Gatsby himself."
+heroImage: /book-covers/3-the-great-gatsby-by-f-scott-fitzgerald.jpg
 affiliateLink: ""
 youTubeLink: ""
 spotifyLink: ""
 spotifyEmbedURL: ""
 applePodcastsLink: ""
+pubDate: Jun 01 2023
 applePodcastsEmbedURL: ""
 ---
 
