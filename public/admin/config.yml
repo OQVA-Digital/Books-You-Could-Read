@@ -22,7 +22,7 @@ collections:
       - {label: "HeroImage", name: "heroImage", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "AffiliateLink", name: "affiliateLink", widget: "string"}
-      - {label: "YouTubeLink", name: "youTubeLink", widget: "string"}m
+      - {label: "YouTubeLink", name: "youTubeLink", widget: "string"}
       - {label: "SpotifyLink", name: "spotifyLink", widget: "string"}
       - {label: "SpotifyEmbedURL", name: "spotifyEmbedURL", widget: "string"}
       - {label: "ApplePodcastsLink", name: "applePodcastsLink", widget: "string"}
