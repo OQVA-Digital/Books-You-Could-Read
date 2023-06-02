@@ -1,0 +1,70 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import "../styles/home.css"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<div class="intro">
+				<div class="flex">
+					<div class="link_ctnr">
+						<a href="" class="youtube icon" target="_blank" title="YouTube"></a>
+						
+						<a href="" class="spotify icon" target="_blank" title="Spotify"></a>
+						
+						<a href="" class="apple_podcasts icon" target="_blank" title="Apple Podcasts"></a>
+						
+						<a href="https://www.instagram.com/booksyoucouldread/" class="instagram icon" target="_blank" title="Instagram"></a>
+						
+						<a href="https://web.facebook.com/BooksYouCouldRead" class="facebook icon" target="_blank" title="Facebook"></a>
+						
+						<a href="https://www.tiktok.com/@booksyoucouldread" class="tiktok icon" target="_blank" title="TikTok"></a>
+						
+						<a href="https://twitter.com/BooksYCRead" class="twitter icon" target="_blank" title="Twitter"></a>
+						
+						<a href="https://v.lemon8-app.com/s/yjmhpcyRR" class="lemon8 icon" target="_blank" title="Lemon8"></a>
+					</div>
+					
+					<h1>Books You Could Read!</h1>
+		
+					<h2>Your friendly guide to the literary world. We're here to make literature less intimidating and more accessible. Dive into our discussions that break down classic and contemporary works, demystify literary themes, and bring books to life.</h2>
+					
+					<a href="/books" class="cta">
+						Explore
+						<hr>
+					</a>
+				</div>
+			</div>
+		</main>
+		<!-- <Footer /> -->
+
+		<script>
+			declare global {
+				interface Window {
+					netlifyIdentity: any;
+				}
+			}
+
+
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on("init", ((user: any) => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+					document.location.href = "/admin/";
+					});
+				}
+				}));
+			}
+		</script>
+	</body>
+</html>

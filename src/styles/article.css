@@ -1,0 +1,242 @@
+body {
+    line-height: 1.6;
+}
+
+p {
+    font-size: clamp(1.5rem, 4.2vmin, 1.9rem);
+    font-weight: 370;
+    margin: 1rem 0 1.5rem;
+}
+
+html.dark p {
+    font-weight: 280;
+}
+
+.heading_ctnr {
+    position: sticky;
+    top: clamp(3rem, 6vw, 5rem);
+    mix-blend-mode: color-burn;
+    width: clamp(10rem, 85vw, 80rem);
+    margin: 0 auto 4rem;
+    height: fit-content;
+}
+
+.heading_ctnr .back {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.heading_ctnr .back span {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-top: solid var(--light-b);
+    border-left: solid var(--light-b);
+    border-bottom: solid transparent;
+    border-right: solid transparent;
+    border-width: 0.3rem;
+    transform: translateX(0.3rem) rotate(-45deg);
+    transition: border 0.6s ease;
+}
+
+.heading_ctnr .back:hover span {
+    border-top: solid var(--c1);
+    border-left: solid var(--c1);
+    transition: border 0s ease;
+}
+
+.hero h1 {
+    font-family: "YesevaOne", serif;
+    font-weight: 300;
+    line-height: 1.1;
+    font-size: clamp(1rem, 14vmin, 7rem);
+    margin-bottom: 2.5rem;
+    word-break: break-word;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    column-gap: 1rem;
+}
+
+.hero .big .book_title {
+    font-size: clamp(1rem, 25vmin, 17rem);
+    line-height: 1;
+}
+
+.comma {
+    color:var(--light-c)
+}
+
+html.dark .comma {
+    color: var(--dark-a);
+}
+
+.authorship {
+    font-size: 0.4em;
+    display: block;
+    margin-top: 1rem;
+}
+
+html.dark .heading_ctnr {
+    mix-blend-mode: difference;
+}
+
+h2 {
+    font-family: 'YesevaOne', serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 7vmin, 3.5rem);
+    margin: 5rem 0 2rem 0;
+    line-height: 1;
+}
+
+code {
+    background-color: transparent;
+    padding: unset;
+    font-size: 2.6em;
+    color: var(--c1);
+    font-family: 'YesevaOne', serif;
+    font-weight: 300;
+    margin-top: 4rem;
+    display: block;
+    letter-spacing: 0.6rem;
+}
+
+.hero {
+    flex-direction: column;
+    margin-bottom: clamp(3rem, 10vw, 8rem);
+}
+
+.hero img {
+    margin-inline: auto;
+    max-height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    object-position: top;
+    background-color: var(--light);
+}
+
+html.dark .hero img {
+    background-color: var(--dark-b);
+}
+
+.content_ctnr {
+    max-width: clamp(10rem, 85vw, 80rem);
+    margin: 0 auto 5rem;
+}
+
+.content_ctnr p {
+    text-align: justify;
+}
+
+.content_ctnr p:first-of-type:first-letter {
+    font-size: 6em;
+    font-family: 'YesevaOne', serif;
+    float: left;
+    line-height: 0.7;
+    margin-right: 1rem;
+}
+
+.affiliate_link {
+    position: sticky;
+    bottom: 1.5rem;
+    background-color: var(--c1);
+    width: calc(100% - 6rem);
+    display: block;
+    padding: clamp(0.6rem, 3vw, 0.9rem) 0;
+    color: var(--light);
+    text-align: center;
+    font-family: "YesevaOne", serif;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 300;
+    margin-inline: auto;
+    border-radius: 0.2rem;
+    margin-bottom: 12rem;
+    max-width: 80rem;
+    transition: background-color 0.6s ease;
+}
+
+.affiliate_link:hover {
+    background-color: var(--c1-a);
+    transition: background-color 0s ease;
+}
+
+.embed_ctnr {
+    max-width: clamp(10rem, 85vw, 80rem);
+    margin: 0 auto 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.back_to_top {
+    position: fixed;
+    bottom: 8rem;
+    right: clamp(0rem, calc(10vw - 10rem), 2rem);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.2rem 0 0 0.2rem;
+    background-color: var(--dark-a);
+    background-image: url(/icons/up.svg);
+    background-repeat: no-repeat;
+    background-size: 1.6rem;
+    background-position: center;
+    opacity:0;
+    visibility: hidden;
+    transform:translateY(0.6rem);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+.back_to_top.show {
+    opacity:1;
+    visibility: visible;
+    transform:translateY(0);
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1080px) {
+    .hero {
+        flex-direction: row;
+        border-bottom: 0.1rem solid var(--light);
+    }
+
+    html.dark .hero {
+        border-color: var(--dark-b);
+    }
+
+    .hero img {
+        margin-inline: unset;
+        width: 50%;
+        /* width: calc(100vh - clamp(4rem,31vmin,11rem));
+        height: calc(100vh - clamp(4rem,31vmin,11rem)); */
+    }
+
+    .heading_ctnr {
+        margin: 2rem auto 8rem;
+        width: clamp(10rem, 42vw, 100rem);
+    }
+
+    .hero h1 {
+        font-size: clamp(1rem, 6vw, 15rem);
+    }
+
+    .hero .big .book_title {
+        font-size: clamp(1rem, 25vmin, 30rem);
+    }
+
+    .authorship {
+        /* font-size: 0.2em; */
+    }
+
+    .back_to_top {
+        border-radius: 0.2rem;
+        bottom: 2rem;
+    }
+}

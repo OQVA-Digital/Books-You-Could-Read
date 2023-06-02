@@ -1,0 +1,226 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import ThemeIcon from "./ThemeIcon.astro"
+---
+
+<header id="start">
+	<a href="/" class="logo">
+		<img
+			src=`/logo/BYCR-logo-dark.svg`
+			alt="BYCR logo"
+			width="50"
+			height="50"
+		/>
+	</a>
+
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+
+		<HeaderLink href="/books">Books</HeaderLink>
+
+		<!-- <HeaderLink href="/about">About</HeaderLink> -->
+
+		<HeaderLink href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" target="_blank" class="external">
+			YouTube
+		</HeaderLink>
+
+		<HeaderLink href="#" target="_blank" class="external">
+			Spotify
+		</HeaderLink>
+
+		<HeaderLink href="#" target="_blank" class="external">
+			iTunes
+		</HeaderLink>
+	</nav>
+
+	<button class="menu_bt" type="button" name="toggle-menu-button">
+		<div></div>
+		<div></div>
+		<div></div>
+	</button>
+
+	<div class="page_fold">
+		<ThemeIcon/>
+	</div>
+</header>
+<style>
+	header {
+		height: clamp(4rem,31vmin,11rem);
+		padding: 3rem;
+		display: flex;
+		align-items: center;
+		gap: 5rem;
+		width: 100%;
+		margin-inline: auto;
+		font-size: clamp(1.6rem,4.5vw,1.9rem);
+		box-sizing: border-box;
+	}
+
+	.page_fold {
+		background-image: url(/corner-fold-light.svg);
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: clamp(8rem,25vw,18rem);
+		height: clamp(8rem,25vw,17rem);
+		background-repeat: no-repeat;
+		background-position: top right;
+    	filter: drop-shadow(0rem 1rem 1.5rem #D3D3D3);
+    	z-index: 2;
+	}
+
+	
+	/* Dark Theme */
+
+	html.dark .page_fold {
+		background-image: url(/corner-fold-dark.svg);
+    	filter: drop-shadow(0rem 1rem 0.8rem #15151588);
+	}
+
+	html.dark nav {
+		color:var(--light);
+		background-color:var(--dark);
+    	border-color: var(--dark-a);
+    	font-weight: 300;
+	}
+
+	html.dark .menu_bt div {
+    	background-color: var(--light);
+	}
+	
+
+	.logo {
+		width: clamp(4rem,11vmin,5rem);
+		height: clamp(4rem,11vmin,5rem);
+		/* position: fixed; */
+		z-index: 3;
+	}
+	.logo img {
+	}
+
+	h2 {
+		margin: 0.5em 0;
+	}
+
+	nav {
+		display: none;
+		flex-direction: column;
+		background-color: var(--light);
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem 0;
+		border-bottom: 0.1rem solid var(--light-a);
+    	z-index: 2;
+	}
+
+	nav a {
+    	padding: 1rem 1.6rem;
+		line-height: 1;
+	}
+
+	nav.show {
+		display: flex;
+	}
+
+	.menu_bt {
+		width: 2.6rem;
+		height: 2.6rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.menu_bt div {
+    	height: 0.2rem;
+		background-color: var(--dark);
+		width: 100%;
+	}
+
+
+
+	@media (min-width:900px) {
+
+		header {
+    		border-bottom: 0.1rem solid var(--light);
+		}
+
+		html.dark header {
+			border-color:var(--dark-b)
+		}
+
+		nav {
+			display: flex;
+			position: relative;
+			border-bottom: unset;
+			gap: 0.6rem;
+			flex-direction: row;
+			background-color:transparent;
+		}
+
+		nav a {
+			padding:1rem 1.6rem;
+			border-radius: 0.3rem;
+			transition: background-color 0.4s ease;
+		}
+
+		nav a:hover {
+			background-color:var(--light);
+			transition: background-color 0.1s ease;
+		}
+
+		html.dark nav a:hover {
+			background-color:var(--dark-b);
+		}
+
+		.menu_bt {
+			display: none;
+		}
+
+		html.dark nav {
+			background-color:transparent;
+		}
+	}
+
+</style>
+
+
+<script is:global>
+
+const menuBt = document.querySelector('.menu_bt')
+const nav = document.querySelector('header nav')
+
+let showingMenu = false;
+
+function toggleNav() {
+    if(showingMenu == false) {
+
+        nav.classList.add('show')
+        menuBt.classList.add('close')
+
+        showingMenu = true;
+    } else {
+
+        nav.classList.remove('show')
+        menuBt.classList.remove('close')
+
+        showingMenu = false;
+    }
+}
+
+menuBt.addEventListener('click', toggleNav)
+
+window.addEventListener('scroll', function() {
+    if(showingMenu == true) {
+        toggleNav()
+    }
+})
+
+</script>

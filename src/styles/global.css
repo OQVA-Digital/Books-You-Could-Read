@@ -1,0 +1,344 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+@font-face {
+	font-family: 'YesevaOne';
+	src: url('/fonts/YesevaOne-Regular.ttf');
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Josefin';
+	src: url('/fonts/JosefinSans-VariableFont_wght.ttf');
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Josefin';
+	src: url('/fonts/JosefinSans-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+	font-display: swap;
+}
+
+:root {
+	--light: #f5f5f5;
+	--light-a: #e8e8e8;
+	--light-b: #6c757d;
+	--light-c:#cccccc;
+
+	--dark:#1c1c1c;
+	--dark-a:#2c3539;
+	--dark-b:#222222;
+
+	--c1: crimson;
+	--c1-a:#ff1d48;
+
+	--width-1: clamp(10rem, 85vw, 150rem);
+}
+
+html,
+body {
+	margin: 0;
+}
+
+body {
+    font-family: 'Josefin', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.5;
+    background-image: linear-gradient(45deg, rgb(245 245 245 / 60%), rgb(245 245 245 / 60%)), url(/noise.svg);
+    background-size: cover,clamp(38rem,150vw,100rem);
+}
+
+.dark body {
+    background-color: #1c1c1c;
+    color: #fff;
+    background-image: linear-gradient(45deg, rgb(20 20 20 / 90%), rgb(20 20 20 / 90%)), url(/noise.svg);
+}
+
+
+.link_ctnr {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    gap: clamp(1rem, 4vw, 2rem) clamp(1rem, 3vw, 2rem);
+}
+
+.link_ctnr a {
+    width: 3.2rem;
+    height: clamp(2.2rem, 6vw, 2.5rem);
+    transition: filter 0.9s ease;
+}
+
+.link_ctnr a:hover {
+    filter:drop-shadow(0 0 1.2rem #aaa);
+    transition: filter 0s ease;
+}
+
+.dark .link_ctnr a:hover {
+    filter:drop-shadow(0 0 1.2rem #555);
+}
+
+.link_ctnr .icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.link_ctnr .youtube {
+    background-image: url(/icons/youtube.svg);
+}
+
+.link_ctnr .spotify {
+    background-image: url(/icons/spotify.svg);
+}
+
+.link_ctnr .apple_podcasts {
+    background-image: url(/icons/apple-podcasts.svg);
+}
+
+.link_ctnr .instagram {
+    background-image: url(/icons/instagram.svg);
+}
+
+.link_ctnr .facebook {
+    background-image: url(/icons/facebook.svg);
+}
+
+.link_ctnr .twitter {
+    background-image: url(/icons/twitter.svg);
+}
+
+.link_ctnr .tiktok {
+    background-image: url(/icons/tiktok.svg);
+}
+
+.link_ctnr .lemon8 {
+    background-image: url(/icons/lemon8.png);
+}
+
+
+
+/* body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/noise.svg);
+    background-size: 50vh;
+    z-index: 2;
+    opacity: 0.4;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+html.dark body::after {
+    mix-blend-mode: color-burn;
+    opacity: 0.6;
+} */
+
+h1 {
+	font-family: 'YesevaOne', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+	margin: 0;
+	cursor: default;
+}
+
+a {
+	color: #3273dc;
+}
+
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+
+input {
+	font-size: 16px;
+}
+
+content {
+	line-height: 1.6;
+}
+
+table {
+	width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+code {
+	padding: 2px 5px;
+	background-color: #f2f2f2;
+}
+
+pre {
+	padding: 1rem;
+}
+
+pre>code {
+	all: unset;
+}
+
+blockquote {
+	border: 1px solid #999;
+	color: #222;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
+}
+
+.external {
+	position: relative;
+}
+
+.external::after {
+    content: '';
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-top: 0.2rem solid;
+    border-right: 0.2rem solid;
+    border-bottom: 0.2rem solid transparent;
+    border-left: 0.2rem solid transparent;
+    opacity: 0.4;
+	transition: opacity 0.4s ease;
+}
+
+.external:hover:after {
+	opacity: 1;
+	transition: opacity 0s ease;
+}
+
+
+
+
+/* Defaults.css */
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	color: unset;
+}
+
+img {
+	user-select: none;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+
+video {
+	background-size: cover;
+	background-position: center;
+}
+
+.mobile_hidden {
+	display: none;
+}
+
+::selection {
+	color: var(--light);
+	background-color: var(--c1);
+}
+
+.dark ::selection {
+	background-color: var(--c1);
+}
+
+main {
+	position: relative;
+	z-index: 1;
+	margin-inline: auto;
+}
+
+button {
+	background-color: transparent;
+	outline-color: transparent;
+	border: unset;
+	padding: unset;
+	font-family: initial, sans-serif;
+	-webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible {
+	outline: 0.1rem solid transparent;
+}
+
+button:not([type="submit"]):focus-visible {
+	outline: 0.1rem solid transparent;
+}
+
+.flex {
+	display: flex;
+}
+
+.icon {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:1920px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media (min-width:2440px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media (min-width:3000px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (min-width:4000px) {
+	html {
+		font-size: 22px;
+	}
+}

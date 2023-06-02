@@ -1,0 +1,81 @@
+body {
+    min-height: 100vh;
+}
+
+main {
+	width: var(--width-1);
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(3.5rem, 12vmin, 9rem);
+    line-height: 1.2;
+    font-weight: 300;
+    text-shadow: 0.3rem 0.3rem #8882;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: clamp(1.6rem, 4.5vmin, 2.4rem);
+    margin-inline: auto;
+    max-width: 91rem;
+}
+
+.intro {
+    min-height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro .flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.intro .cta {
+    font-size: clamp(1.6rem, 5vw, 2.3rem);
+    position: relative;
+}
+
+.intro .cta hr {
+    height: 21vh;
+    margin: 0 auto;
+    border: unset;
+    width: 0.1rem;
+    background-color: var(--dark-a);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(107%);
+}
+
+.link_ctnr {
+    justify-content: center;
+    margin-inline: auto;
+    max-width: 60vw;
+}
+
+
+.fold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+@media (min-width:900px) {
+    .intro {
+        margin-top: 3rem;
+    }
+
+    h1 {
+        font-size: clamp(3.5rem, 7vw, 10rem);
+    }
+}
