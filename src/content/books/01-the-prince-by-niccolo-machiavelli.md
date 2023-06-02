@@ -1,5 +1,5 @@
 ---
-title: DA PRINCE
+title: The Prince
 bookAuthor: Niccolo Machiavelli
 description: "'The Prince' by Niccolo Machiavelli, the book that makes
   politicians shiver with both excitement and fear. Published way back in 1532,
