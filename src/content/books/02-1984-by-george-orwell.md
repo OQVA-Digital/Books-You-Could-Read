@@ -1,9 +1,16 @@
 ---
 title: "1984"
-bookAuthor: "George Orwell"
-description: "Here we are, folks. 1984. The year that saw the first ever Apple Macintosh computer and the last time America hosted the Summer Olympics in Los Angeles. But there's one event that towers above the rest: George Orwell's '1984' was published, and it changed literature forever. With its bleak portrayal of a future ruled by Big Brother and his omnipresent, dictatorial regime, this dystopian work has left an indelible mark on our literary landscape. So let's strap on our dystopian goggles and dig deep into the world of '1984'."
-pubDate: "Jun 01 2023"
-heroImage: "/book-covers/2-1984-by-george-orwell.jpg"
+bookAuthor: George Orwell
+description: "Here we are, folks. 1984. The year that saw the first ever Apple
+  Macintosh computer and the last time America hosted the Summer Olympics in Los
+  Angeles. But there's one event that towers above the rest: George Orwell's
+  '1984' was published, and it changed literature forever. With its bleak
+  portrayal of a future ruled by Big Brother and his omnipresent, dictatorial
+  regime, this dystopian work has left an indelible mark on our literary
+  landscape. So let's strap on our dystopian goggles and dig deep into the world
+  of '1984'."
+pubDate: Jun 01 2023
+heroImage: /book-covers/2-1984-by-george-orwell.jpg
 affiliateLink: ""
 youTubeLink: ""
 spotifyLink: ""
@@ -11,8 +18,7 @@ spotifyEmbedURL: ""
 applePodcastsLink: ""
 applePodcastsEmbedURL: ""
 ---
-
-Here we are, folks. 1984. The year that saw the first ever Apple Macintosh computer and the last time America hosted the Summer Olympics in Los Angeles. But there's one event that towers above the rest: George Orwell's '1984' was published, and it changed literature forever. With its bleak portrayal of a future ruled by Big Brother and his omnipresent, dictatorial regime, this dystopian work has left an indelible mark on our literary landscape. So let's strap on our dystopian goggles and dig deep into the world of '1984'.
+George Orwell's '1984' changed literature forever. With its bleak portrayal of a future ruled by Big Brother and his omnipresent, dictatorial regime, this dystopian work has left an indelible mark on our literary landscape. So let's strap on our dystopian goggles and dig deep into the world of '1984'.
 
 ## About the Author
 
@@ -34,15 +40,13 @@ Winston is the sort of protagonist you can't help but root for - he's the averag
 
 Finally, there's O'Brien. He's like a cat playing with a mouse - always one step ahead and seemingly impossible to pin down. He's the representation of the true power in this society, the inner circle of the Party. And despite his sinister nature, there's an undeniable charm in his actions and words that readers can't help but be captivated by. He's a character who leaves you questioning your own loyalty, your own morals, and your own understanding of right and wrong. 
 
-So there you have it, the three main characters of George Orwell's '1984.' Each one bringing something new and unique to a story that has since become a classic.
-
 ## Plot
 
-Ah, dystopian fiction! Nothing like a good old oppressive regime to spice up a story. '1984' is set in a future where the government, or the "Party" as they're called, is basically Big Brother on steroids. Winston, our main character, works in the Ministry of Truth, which could be, for all intents and purposes, the Ministry of Propaganda, where he alters historical records to suit the Party's needs. But our boy Winston is a rebel at heart. He can't take it anymore and decides to resist the system. Then he meets Julia, and sparks fly. Well, they're not allowed to be in love, so it's more like clandestine sparks. Anyways, they get caught and the Party tortures them. Ouch! But is there any hope for the lovers? Will they ever be able to take down the Party and their all-seeing surveillance? Stay tuned! Or, you know, read the book.
+Ah, dystopian fiction! Nothing like a good old oppressive regime to spice up a story. '1984' is set in a future where the government, or the "Party" as they're called, is basically Big Brother on steroids. Winston, our main character, works in the Ministry of Truth, which could be, for all intents and purposes, the Ministry of Propaganda, where he alters historical records to suit the Party's needs. But our boy Winston is a rebel at heart. He can't take it anymore and decides to resist the system. Then he meets Julia, and sparks fly. Well, they're not allowed to be in love, so it's more like clandestine sparks. Anyways, they get caught and the Party tortures them. Ouch! But is there any hope for the lovers? Will they ever be able to take down the Party and their all-seeing surveillance?
 
 ## Style
 
-Ah, the make-or-break category that separates the greats from the average Joes. With Orwell's dystopian novel, we see a narrative style that's as straightforward as a GPS unit. No frills, no fluff, just the facts and the story's message. But don't mistake simplicity for lack of literary merit. Oh no, Orwell uses literary techniques like metaphor, simile, and irony to add depth and nuance to his work. It's like he's seasoning a dish with just the right amount of spices to make it sing. And what a dish it is! A dark and disturbing world that warns us of the dangers of totalitarianism and the importance of free thought. So, if you're looking for a flashy fireworks show of a writing style, this may not be for you. But if you're after a carefully crafted and thought-provoking read, well then, buckle up, my friend.
+Ah, the make-or-break category that separates the greats from the average Joes. With Orwell's dystopian novel, we see a narrative style that's as straightforward as a GPS unit. No frills, no fluff, just the facts and the story's message. But don't mistake simplicity for lack of literary merit. Oh no, Orwell uses literary techniques like metaphor, simile, and irony to add depth and nuance to his work. It's like he's seasoning a dish with just the right amount of spices to make it sing. And what a dish it is! A dark and disturbing world that warns us of the dangers of totalitarianism and the importance of free thought. So, if you're looking for a flashy fireworks show of a writing style, this may not be for you. But if you're after a carefully crafted and thought-provoking read, you're in for a wonderfully bittersweet treat.
 
 ## Historical Context
 
@@ -58,4 +62,4 @@ The fundamental message of '1984' is one that rings just as true today as it did
 
 `***`
 
-As we come to the end of this commentary, we can't help but reflect on the power of literature to influence and shape our attitudes towards society. '1984' may have been written several decades ago, but its message is as relevant today as it was back then. The book highlights the dangers of governments that prioritize control over the freedom of their citizens. It also serves as a reminder of the importance of individual liberty and the need to remain vigilant against any attempts to limit it. In a world where the lines between truth and lies are becoming increasingly blurred, '1984' is a timely warning against the dangers of misinformation and propaganda. It's a book that deserves to be read and discussed by people of all ages, races, and nationalities. In many ways, it's a manifesto for freedom that reminds us of the power of one person to make a difference.
+We can't help but reflect on the power of literature to influence and shape our attitudes towards society. '1984' may have been written several decades ago, but its message is as relevant today as it was back then. The book highlights the dangers of governments that prioritize control over the freedom of their citizens. It also serves as a reminder of the importance of individual liberty and the need to remain vigilant against any attempts to limit it. In a world where the lines between truth and lies are becoming increasingly blurred, '1984' is a timely warning against the dangers of misinformation and propaganda. It's a book that deserves to be read and discussed by people of all ages, races, and nationalities. In many ways, it's a manifesto for freedom that reminds us of the power of one person to make a difference.
