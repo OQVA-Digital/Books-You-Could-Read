@@ -1,14 +1,11 @@
 ---
 title: "1984"
 bookAuthor: George Orwell
-description: "Here we are, folks. 1984. The year that saw the first ever Apple
-  Macintosh computer and the last time America hosted the Summer Olympics in Los
-  Angeles. But there's one event that towers above the rest: George Orwell's
-  '1984' was published, and it changed literature forever. With its bleak
+description: George Orwell's '1984' changed literature forever. With its bleak
   portrayal of a future ruled by Big Brother and his omnipresent, dictatorial
   regime, this dystopian work has left an indelible mark on our literary
   landscape. So let's strap on our dystopian goggles and dig deep into the world
-  of '1984'."
+  of '1984'.
 pubDate: Jun 01 2023
 heroImage: /book-covers/2-1984-by-george-orwell.jpg
 affiliateLink: ""
