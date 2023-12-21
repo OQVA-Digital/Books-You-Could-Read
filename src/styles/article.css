@@ -21,8 +21,8 @@ html.dark p {
     position: sticky;
     top: clamp(3rem, 6vw, 5rem);
     /* mix-blend-mode: color-burn; */
-    color: var(--light);
-    mix-blend-mode: difference;
+    /* color: var(--light); */
+    /* mix-blend-mode: difference; */
     width: clamp(10rem, 85vw, 80rem);
     margin: 0 auto 4rem;
     height: fit-content;
@@ -37,21 +37,60 @@ html.dark p {
 }
 
 .heading_ctnr .back span {
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.6rem;
+    height: 0.6rem;
     border-top: solid var(--light-b);
     border-left: solid var(--light-b);
     border-bottom: solid transparent;
     border-right: solid transparent;
-    border-width: 0.3rem;
+    border-width: 0.5rem;
+    transition: border-color 0.6s ease;
+    -webkit-transition: border-color 0.6s ease;
+    -moz-transition: border-color 0.6s ease;
+    -ms-transition: border-color 0.6s ease;
+    -o-transition: border-color 0.6s ease;
     transform: translateX(0.3rem) rotate(-45deg);
-    transition: border 0.6s ease;
+    -webkit-transform: translateX(0.3rem) rotate(-45deg);
+    -moz-transform: translateX(0.3rem) rotate(-45deg);
+    -ms-transform: translateX(0.3rem) rotate(-45deg);
+    -o-transform: translateX(0.3rem) rotate(-45deg);
 }
 
 .heading_ctnr .back:hover span {
-    border-top: solid var(--c1);
-    border-left: solid var(--c1);
-    transition: border 0s ease;
+    border-top-color: var(--highlightBookColor, var(--c1));
+    border-left-color: var(--highlightBookColor, var(--c1));
+    transition: border-color 0s ease;
+    -webkit-transition: border-color 0s ease;
+    -moz-transition: border-color 0s ease;
+    -ms-transition: border-color 0s ease;
+    -o-transition: border-color 0s ease;
+}
+
+.heading_ctnr .back p {
+    margin: 0.6rem 0 0 1rem;
+    font-size: 2rem;
+    color: var(--highlightBookColor, var(--c1));
+    font-weight: 400;
+    transform: translateX(-1rem);
+    -webkit-transform: translateX(-1rem);
+    -moz-transform: translateX(-1rem);
+    -ms-transform: translateX(-1rem);
+    -o-transform: translateX(-1rem);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    -webkit-transition: transform 0.2s ease, opacity 0.2s ease;
+    -moz-transition: transform 0.2s ease, opacity 0.2s ease;
+    -ms-transition: transform 0.2s ease, opacity 0.2s ease;
+    -o-transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.heading_ctnr .back:hover p {
+    transform: translateX(0rem);
+    -webkit-transform: translateX(0rem);
+    -moz-transform: translateX(0rem);
+    -ms-transform: translateX(0rem);
+    -o-transform: translateX(0rem);
+    opacity: 1;
 }
 
 .hero h1 {
@@ -77,7 +116,7 @@ html.dark p {
 }
 
 html.dark .comma {
-    color: var(--dark-a);
+    color: var(--light-b);
 }
 
 .title .small {
@@ -103,10 +142,10 @@ h2 {
 }
 
 code {
+    color: var(--highlightBookColor, var(--c1));
     background-color: transparent;
     padding: unset;
     font-size: 2.6em;
-    color: var(--c1);
     font-family: 'YesevaOne', serif;
     font-weight: 300;
     margin-top: 4rem;
@@ -153,7 +192,7 @@ html.dark .hero img {
     position: sticky;
     bottom: 1.5rem;
     background-color: var(--highlightBookColor, var(--c1));
-    width: calc(100% - 6rem);
+    width: 100%;
     display: block;
     padding: clamp(0.6rem, 3vw, 0.9rem) 0;
     color: var(--light);
@@ -161,9 +200,8 @@ html.dark .hero img {
     font-family: "YesevaOne", serif;
     font-size: clamp(1.4rem, 4vw, 1.8rem);
     font-weight: 300;
-    margin-inline: auto;
+    margin: clamp(4rem, 5vw, 8rem) auto 12rem;
     border-radius: 0.2rem;
-    margin-bottom: 12rem;
     max-width: 80rem;
     transition: filter 0.6s ease;
     -webkit-transition: filter 0.6s ease;

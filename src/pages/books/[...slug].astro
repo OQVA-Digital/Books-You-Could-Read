@@ -7,6 +7,9 @@ import HeaderLink from "../../components/HeaderLink.astro";
 import "../../styles/article.css";
 
 import { YOUTUBE_CHANNEL, SPOTIFY_CHANNEL, APPLE_CHANNEL } from "../../consts";
+import YouTube from '../../components/svg/icons/YouTube.astro';
+import Spotify from '../../components/svg/icons/Spotify.astro';
+import ApplePodcasts from '../../components/svg/icons/ApplePodcasts.astro';
 
 type Props = CollectionEntry<'books'>;
 
@@ -32,14 +35,14 @@ const highlightBookColor = book.data.highlightColor;
 	<main>
 		<div class="hero flex">
 			<div class="heading_ctnr">
-				<HeaderLink href="/books" class="back">
+				<HeaderLink href={`/books#${(book.data.title).toLowerCase().replace(/\s+/g, '-')}`}`} class="back" title="Return to Books">
 				<span></span>
+				<p>return</p>
 				</HeaderLink>
 
 				<h1 class={String(book.data.title).length < 6 ? "title big" : "title"}>
 					<span>
-						<span class="book_title">{book.data.title}</span>
-						<span class="comma">,</span>
+						<span class="book_title">{book.data.title}</span><span class="comma">,</span>
 					</span>
 					<span class="small">by 
 						<span class="authorship">{book.data.bookAuthor}</span>
@@ -47,11 +50,23 @@ const highlightBookColor = book.data.highlightColor;
 				</h1>
 
 				<div class="link_ctnr">
-					{String(book.data.youTubeLink).startsWith('http') ? <a href={book.data.youTubeLink} class="youtube icon" target="_blank"></a> : <a href={YOUTUBE_CHANNEL} class="youtube icon" target="_blank"></a>}
+					{String(book.data.youTubeLink).startsWith('http') ? <a href={book.data.youTubeLink} class="youtube icon" target="_blank">
+						<YouTube/>
+					</a> : <a href={YOUTUBE_CHANNEL} class="youtube icon" target="_blank">
+						<YouTube/>
+					</a>}
 
-					{String(book.data.spotifyLink).startsWith('http') ? <a href={book.data.spotifyLink} class="spotify icon" target="_blank"></a> : <a href={SPOTIFY_CHANNEL} class="spotify icon" target="_blank"></a>}
+					{String(book.data.spotifyLink).startsWith('http') ? <a href={book.data.spotifyLink} class="spotify icon" target="_blank">
+						<Spotify/>
+					</a> : <a href={SPOTIFY_CHANNEL} class="spotify icon" target="_blank">
+						<Spotify/>
+					</a>}
 
-					{String(book.data.applePodcastsLink).startsWith('http') ? <a href={book.data.applePodcastsLink} class="spotify icon" target="_blank"></a> : <a href={APPLE_CHANNEL} class="apple_podcasts icon" target="_blank"></a>}
+					{String(book.data.applePodcastsLink).startsWith('http') ? <a href={book.data.applePodcastsLink} class="spotify icon" target="_blank">
+						<ApplePodcasts/>
+					</a> : <a href={APPLE_CHANNEL} class="apple_podcasts icon" target="_blank">
+						<ApplePodcasts/>
+					</a>}
 
 					<!-- <a href={spotifyLink} class="spotify icon" target="_blank"></a> -->
 					
@@ -98,7 +113,7 @@ const highlightBookColor = book.data.highlightColor;
 </Layout>
 
 <style define:vars={{ highlightBookColor }}>
-    h1 .authorship  {
+    h1 .authorship, code {
         color: var(--highlightBookColor);
     }
 </style>

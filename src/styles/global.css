@@ -112,32 +112,9 @@ body {
     background-repeat: no-repeat;
 }
 
-.link_ctnr .youtube {
-    background-image: url(/icons/youtube.svg);
-}
-
-.link_ctnr .spotify {
-    background-image: url(/icons/spotify.svg);
-}
-
-.link_ctnr .apple_podcasts {
-    background-image: url(/icons/apple-podcasts.svg);
-}
-
-.link_ctnr .instagram {
-    background-image: url(/icons/instagram.svg);
-}
-
-.link_ctnr .facebook {
-    background-image: url(/icons/facebook.svg);
-}
-
-.link_ctnr .twitter {
-    background-image: url(/icons/twitter.svg);
-}
-
-.link_ctnr .tiktok {
-    background-image: url(/icons/tiktok.svg);
+.link_ctnr .icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .link_ctnr .lemon8 {
@@ -346,7 +323,7 @@ button:not([type="submit"]):focus-visible {
 .cookie-consent-banner {
     display: none;
     position: fixed;
-    bottom: 2rem;
+    bottom: 1.5rem;
     left: 1rem;
     right: 1rem;
     background-color: var(--light);
@@ -360,8 +337,12 @@ button:not([type="submit"]):focus-visible {
     width: 100%;
     box-sizing: border-box;
     width: var(--width);
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     border: 0.1rem solid var(--light-c);
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
 }
 
 .dark .cookie-consent-banner .cookie_heading + p {
