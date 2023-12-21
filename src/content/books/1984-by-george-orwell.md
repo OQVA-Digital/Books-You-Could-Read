@@ -7,7 +7,7 @@ description: George Orwell's '1984' changed literature forever. With its bleak
   landscape. So let's strap on our dystopian goggles and dig deep into the world
   of '1984'.
 pubDate: Jun 01 2023
-heroImage: /book-covers/2-1984-by-george-orwell.jpg
+coverImage: /book-covers/2-1984-by-george-orwell.jpg
 affiliateLink: ""
 youTubeLink: ""
 spotifyLink: ""

@@ -9,7 +9,7 @@ description: "'The Prince' by Niccolo Machiavelli, the book that makes
   Whether you're interested in power, warfare or governance, there are certainly
   some important lessons to be learned from this Machiavellic gem."
 pubDate: Jun 01 2023
-heroImage: /book-covers/1-the-prince-by-niccolo-machiavelli.jpg
+coverImage: /book-covers/1-the-prince-by-niccolo-machiavelli.jpg
 affiliateLink: https://www.amazon.co.uk/Prince-Oxford-Worlds-Classics/dp/0199535698/ref=sr_1_2?crid=16N2GYANZM4UB&amp;dd=LTodsQUKCzcFINmsSObyWw%252C%252C&amp;keywords=the+prince&amp;qid=1685396991&amp;refinements=p_90%253A22415809031&amp;rnid=5381144031&amp;sprefix=the+prince%252Caps%252C171&amp;sr=8-2&_encoding=UTF8&tag=bycr-21&linkCode=ur2&linkId=6ec9b2300de75724217e788588773e5f&camp=1634&creative=6738
 youTubeLink: https://youtu.be/bRRW6nZjywc
 spotifyLink: ""

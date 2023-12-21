@@ -185,6 +185,48 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"books": {
+"1984-by-george-orwell.md": {
+	id: "1984-by-george-orwell.md";
+  slug: "1984-by-george-orwell";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"the-alchemist-by-paulo-coelho.md": {
+	id: "the-alchemist-by-paulo-coelho.md";
+  slug: "the-alchemist-by-paulo-coelho";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"the-brothers-karamazov-by-fyodor-dostoevsky.md": {
+	id: "the-brothers-karamazov-by-fyodor-dostoevsky.md";
+  slug: "the-brothers-karamazov-by-fyodor-dostoevsky";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"the-girl-on-the-train-by-paula-hawkins.md": {
+	id: "the-girl-on-the-train-by-paula-hawkins.md";
+  slug: "the-girl-on-the-train-by-paula-hawkins";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"the-great-gatsby-by-f-scott-fitzgerald.md": {
+	id: "the-great-gatsby-by-f-scott-fitzgerald.md";
+  slug: "the-great-gatsby-by-f-scott-fitzgerald";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
+"the-prince-by-niccolo-machiavelli.md": {
+	id: "the-prince-by-niccolo-machiavelli.md";
+  slug: "the-prince-by-niccolo-machiavelli";
+  body: string;
+  collection: "books";
+  data: InferEntrySchema<"books">
+} & { render(): Render[".md"] };
 };
 
 	};

@@ -9,7 +9,7 @@ description: "'The Great Gatsby', a novel that has been dissected and analyzed
   glam that make this book such a delightful romp through the pages of history.
   So buckle up, dear readers, as we delve into the world of the 1920s and the
   enigmatic Jay Gatsby himself."
-heroImage: /book-covers/3-the-great-gatsby-by-f-scott-fitzgerald.jpg
+coverImage: /book-covers/3-the-great-gatsby-by-f-scott-fitzgerald.jpg
 affiliateLink: ""
 youTubeLink: ""
 spotifyLink: ""
