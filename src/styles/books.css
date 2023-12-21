@@ -1,5 +1,5 @@
 main {
-    width: var(--width-1);
+    width: var(--width);
     text-align: center;
 	display: flex;
 	justify-content: center;
@@ -26,13 +26,12 @@ main {
 	}
 
 	ul li a .title {
-		transition: color 0.5s ease;
-	}
-
-	ul li a:hover .title {
-		color:var(--c1);
-		transition: color 0s ease;
-	}
+		transition: color 2s ease;
+		-webkit-transition: color 2s ease;
+		-moz-transition: color 2s ease;
+		-ms-transition: color 2s ease;
+		-o-transition: color 2s ease;
+}
 
 	ul li hr {
 		width: 100%;

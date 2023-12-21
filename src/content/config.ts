@@ -15,13 +15,14 @@ const books = defineCollection({
 			.string()
 			.optional()
 			.transform((str) => (str ? new Date(str) : undefined)),
-		heroImage: z.string().optional(),
+		coverImage: z.string().optional(),
 		affiliateLink: z.string().optional(),
 		youTubeLink: z.string().optional(),
 		spotifyLink: z.string().optional(),
 		spotifyEmbedURL: z.string().optional(),
 		applePodcastsLink: z.string().optional(),
 		applePodcastsEmbedURL: z.string().optional(),
+		highlightColor: z.string().optional()
 	}),
 });
 

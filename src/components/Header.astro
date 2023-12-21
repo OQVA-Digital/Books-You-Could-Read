@@ -4,56 +4,65 @@ import ThemeIcon from "./ThemeIcon.astro"
 ---
 
 <header id="start">
-	<a href="/" class="logo">
-		<img
-			src=`/logo/BYCR-logo-dark.svg`
-			alt="BYCR logo"
-			width="50"
-			height="50"
-		/>
-	</a>
+	<div class="ctnr">
+		<a href="/" class="logo">
+			<img
+				src=`/logo/BYCR-logo-dark.svg`
+				alt="BYCR logo"
+				width="50"
+				height="50"
+			/>
+		</a>
 
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
+		<nav>
+			<HeaderLink href="/">Home</HeaderLink>
 
-		<HeaderLink href="/books">Books</HeaderLink>
+			<HeaderLink href="/books">Books</HeaderLink>
 
-		<!-- <HeaderLink href="/about">About</HeaderLink> -->
+			<!-- <HeaderLink href="/about">About</HeaderLink> -->
 
-		<HeaderLink href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" target="_blank" class="external">
-			YouTube
-		</HeaderLink>
+			<HeaderLink href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" target="_blank" class="external">
+				YouTube
+			</HeaderLink>
 
-		<HeaderLink href="#" target="_blank" class="external">
-			Spotify
-		</HeaderLink>
+			<HeaderLink href="#" target="_blank" class="external">
+				Spotify
+			</HeaderLink>
 
-		<HeaderLink href="#" target="_blank" class="external">
-			iTunes
-		</HeaderLink>
-	</nav>
+			<HeaderLink href="#" target="_blank" class="external">
+				iTunes
+			</HeaderLink>
+		</nav>
 
-	<button class="menu_bt" type="button" name="toggle-menu-button">
-		<div></div>
-		<div></div>
-		<div></div>
-	</button>
+		<button class="menu_bt" type="button" name="toggle-menu-button">
+			<div></div>
+			<div></div>
+			<div></div>
+		</button>
 
-	<div class="page_fold">
-		<ThemeIcon/>
+		<div class="page_fold">
+			<ThemeIcon/>
+		</div>
 	</div>
 </header>
+
+
 <style>
 	header {
-		height: clamp(4rem,31vmin,11rem);
-		padding: 3rem;
-		display: flex;
-		align-items: center;
-		gap: 5rem;
 		width: 100%;
 		margin-inline: auto;
 		font-size: clamp(1.6rem,4.5vw,1.9rem);
+	}
+
+	header > .ctnr {
+		height: clamp(4rem,31vmin,11rem);
+		display: flex;
+		align-items: center;
+		gap: 5rem;
+		width: var(--width);
+		padding-block: 3rem;
 		box-sizing: border-box;
+		margin-inline: auto;
 	}
 
 	.page_fold {
@@ -192,7 +201,7 @@ import ThemeIcon from "./ThemeIcon.astro"
 </style>
 
 
-<script is:global>
+<script is:inline>
 
 const menuBt = document.querySelector('.menu_bt')
 const nav = document.querySelector('header nav')

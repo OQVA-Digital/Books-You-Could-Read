@@ -2,6 +2,11 @@ body {
     line-height: 1.6;
 }
 
+::selection, .dark ::selection {
+	color: var(--light);
+	background-color: var(--highlightBookColor, var(--c1));
+}
+
 p {
     font-size: clamp(1.5rem, 4.2vmin, 1.9rem);
     font-weight: 370;
@@ -73,10 +78,14 @@ html.dark .comma {
     color: var(--dark-a);
 }
 
-.authorship {
-    font-size: 0.4em;
+.title .small {
+    font-size: clamp(1rem, 5vmin, 3rem);
     display: block;
     margin-top: 1rem;
+}
+
+.title .authorship {
+
 }
 
 html.dark .heading_ctnr {
@@ -141,7 +150,7 @@ html.dark .hero img {
 .affiliate_link {
     position: sticky;
     bottom: 1.5rem;
-    background-color: var(--c1);
+    background-color: var(--highlightBookColor, var(--c1));
     width: calc(100% - 6rem);
     display: block;
     padding: clamp(0.6rem, 3vw, 0.9rem) 0;
@@ -154,12 +163,17 @@ html.dark .hero img {
     border-radius: 0.2rem;
     margin-bottom: 12rem;
     max-width: 80rem;
-    transition: background-color 0.6s ease;
+    transition: filter 0.6s ease;
+    -webkit-transition: filter 0.6s ease;
+    -moz-transition: filter 0.6s ease;
+    -ms-transition: filter 0.6s ease;
+    -o-transition: filter 0.6s ease;
 }
 
 .affiliate_link:hover {
-    background-color: var(--c1-a);
-    transition: background-color 0s ease;
+    transition: filter 0s ease;
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
 }
 
 .embed_ctnr {
@@ -214,17 +228,18 @@ html.dark .hero img {
     .hero img {
         margin-inline: unset;
         width: 50%;
-        /* width: calc(100vh - clamp(4rem,31vmin,11rem));
-        height: calc(100vh - clamp(4rem,31vmin,11rem)); */
+        max-width: 80rem;
     }
 
     .heading_ctnr {
-        margin: 2rem auto 8rem;
-        width: clamp(10rem, 42vw, 100rem);
+        margin: 2rem auto 8rem 0;
+        width: 50%;
+        box-sizing: border-box;
+        padding-left: var(--corner-width);
     }
 
     .hero h1 {
-        font-size: clamp(1rem, 6vw, 15rem);
+        font-size: clamp(1rem, 6vw, 12rem);
     }
 
     .hero .big .book_title {

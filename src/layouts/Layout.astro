@@ -1,0 +1,40 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	hasOQVABadge?: string;
+}
+
+const { title, description, keywords, hasOQVABadge } = Astro.props;
+
+import BaseHead from '../components/BaseHead.astro';
+import OQVABadge from '../components/OQVABadge.astro';
+
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../consts";
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<BaseHead 
+	title={title ? title : SITE_TITLE}
+	description={description ? description : SITE_DESCRIPTION} />
+
+	<body>
+		<Header/>
+
+		<slot />
+
+		<Footer/>
+
+		<CookieConsent/>
+
+		{hasOQVABadge != "false" ? (
+			<OQVABadge/>
+		) : null}
+	</body>
+</html>

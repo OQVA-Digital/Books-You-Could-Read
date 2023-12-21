@@ -3,7 +3,7 @@ body {
 }
 
 main {
-	width: var(--width-1);
+	width: var(--width);
 }
 
 h1 {

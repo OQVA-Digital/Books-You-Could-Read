@@ -1,41 +1,50 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
 
 import "../../styles/books.css"
 
-const posts = (await getCollection('books')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+const books = (await getCollection('books')).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
+
+type Props = CollectionEntry<'books'>;
+
+export async function getStaticPaths() {
+  const books = await getCollection('books');
+  return books.map((book) => ({
+    params: { slug: book.slug },
+    props: book,
+  }));
+}
+
+const book = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/books/${post.slug}/`}><span class="title">{post.data.title}</span>, by {post.data.bookAuthor}</a>
-								<hr/>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<!-- <Footer /> -->
-	</body>
-</html>
+<Layout {...book.data}>
+	<main>
+		<section>
+			<ul>
+				{books.map((book) => (
+				  <li>
+					<a href={`/books/${book.slug}/`} style={{ '--highlight-color': book.data.highlightColor }}>
+					  <span class="title">{book.data.title}</span>, by {book.data.bookAuthor}
+					</a>
+					<hr />
+				  </li>
+				))}
+			</ul>
+		</section>
+	</main>
+</Layout>
 
-<!-- <FormattedDate date={post.data.pubDate} /> -->
+<style>
+	ul li a:hover .title {
+		color: var(--highlight-color, var(--c1));
+		transition: color 0s ease;
+		-webkit-transition: color 0s ease;
+		-moz-transition: color 0s ease;
+		-ms-transition: color 0s ease;
+		-o-transition: color 0s ease;
+	}
+</style>

@@ -38,7 +38,9 @@
 	--c1: crimson;
 	--c1-a:#ff1d48;
 
-	--width-1: clamp(10rem, 85vw, 150rem);
+	--width: clamp(10rem, 85vw, 150rem);
+
+    --corner-width: calc((100vw - var(--width)) / 2);
 }
 
 html,

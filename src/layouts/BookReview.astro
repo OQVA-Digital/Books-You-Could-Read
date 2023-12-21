@@ -15,7 +15,7 @@ const {
 	description,
 	pubDate,
 	updatedDate,
-	heroImage,
+	coverImage,
 	affiliateLink,
 	youTubeLink,
 	spotifyLink,
@@ -37,84 +37,6 @@ const applePodcastsDefault = ''
 
 	<body>
 		<Header/>
-		<main>
-			<article>
-				<div class="hero flex">
-					<div class="heading_ctnr">
-						<HeaderLink href="/books" class="back">
-						<span></span>
-						</HeaderLink>
-
-						<h1 class={String(title).length < 6 ? "title big" : "title"}><span><span class="book_title">{title}</span><span class="comma">,</span></span>
-							<span class="authorship">by {bookAuthor}</span></h1>
-
-						<div class="link_ctnr">
-							{String(youTubeLink).startsWith('http') ? <a href={youTubeLink} class="youtube icon" target="_blank"></a> : <a href={ytDefault} class="youtube icon" target="_blank"></a>}
-
-							{String(spotifyLink).startsWith('http') ? <a href={spotifyLink} class="spotify icon" target="_blank"></a> : <a href={spotifyDefault} class="spotify icon" target="_blank"></a>}
-
-							{String(applePodcastsLink).startsWith('http') ? <a href={applePodcastsLink} class="spotify icon" target="_blank"></a> : <a href={applePodcastsDefault} class="apple_podcasts icon" target="_blank"></a>}
-
-							<!-- <a href={spotifyLink} class="spotify icon" target="_blank"></a> -->
-							
-							<!-- <a href={applePodcastLink} class="apple_podcasts icon" target="_blank"></a> -->
-						</div>
-					</div>
-					{
-						heroImage && (
-							<img
-								width={720}
-								height={720}
-								src={heroImage}
-								alt="book-cover-art"
-							/>
-						)
-					}
-				</div>
-				<!-- <FormattedDate date={pubDate} /> -->
-				{
-					updatedDate && (
-						<div class="last-updated-on">
-							Last updated on <FormattedDate date={updatedDate} />
-						</div>
-					)
-				}
-				<slot />
-			</article>
-
-			{String(affiliateLink).startsWith('http') ? <a href={affiliateLink} target="_blank" rel="noopener noreferrer" class="affiliate_link external">Like it? Buy it! Read it!</a> : ""}
-
-			<div class="embed_ctnr">
-
-				{String(spotifyEmbedURL).startsWith('http') ? <iframe style="border-radius:12px" src={spotifyEmbedURL} width="100%" height="152" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> : ""}
-				
-				{String(applePodcastsEmbedURL).startsWith('http') ? <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%; overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src={applePodcastsEmbedURL}></iframe> : ""}
-				
-			</div>
-
-			<a href="#start" class="back_to_top" title="back to top" aria-label="back to top"></a>
-		</main>
 		<Footer />
 	</body>
 </html>
-
-
-
-<script is:inline>
-	const backTopBt = document.querySelector('.back_to_top')
-
-	let scroll;
-	scroll = window.scrollY;
-
-	const windowHeight = window.innerHeight
-
-	window.addEventListener('scroll', function() {
-		scroll = window.scrollY;
-
-		if(scroll > windowHeight) {
-			backTopBt.classList.add('show')
-		} else {
-			backTopBt.classList.remove('show')
-		}
-	})
-</script>

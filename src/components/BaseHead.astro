@@ -12,6 +12,10 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
+
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE, BRAND_NAME, FACEBOOK_URL } from "../consts";
+
+import { Schema } from "astro-seo-schema";
 ---
 
 <!-- Global Metadata -->
@@ -33,11 +37,48 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={OG_IMAGE} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={OG_IMAGE} />
+
+    
+<Schema
+item={{
+	// WEBPAGE
+	"@context": "https://schema.org",
+	"@type":"WebPage",
+	"name":`${SITE_TITLE}`,
+	"url":`${Astro.url}`,
+	"description":`${SITE_DESCRIPTION}`,
+	"isPartOf":{
+		// WEBSITE
+		"@type":"WebSite",
+		"name":`${BRAND_NAME}`,
+		"@id":`${Astro.url}`,
+		"url":`${Astro.url.origin}`,
+			// ORGANIZATION
+			"publisher":{
+			"@type":"Organization",
+			"name":`${BRAND_NAME}`,
+			"image": "/og/social-image.jpg",
+			"url":`${Astro.url}`,
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "6-8 Bonhill Street",
+				"addressRegion": "London",
+				"addressLocality": "London",
+				"postalCode": "EC2A 4BX",
+				"addressCountry": "UK"
+			},
+			"sameAs":[
+				`${FACEBOOK_URL ? FACEBOOK_URL : ""}`
+			]
+			}
+		}
+}}
+/>
