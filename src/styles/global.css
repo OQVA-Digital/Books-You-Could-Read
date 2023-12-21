@@ -41,6 +41,8 @@
 	--width: clamp(10rem, 85vw, 150rem);
 
     --corner-width: calc((100vw - var(--width)) / 2);
+
+	--header-height:clamp(4rem,31vmin,11rem);
 }
 
 html,
@@ -61,6 +63,25 @@ body {
     background-color: #1c1c1c;
     color: #fff;
     background-image: linear-gradient(45deg, rgb(20 20 20 / 90%), rgb(20 20 20 / 90%)), url(/noise.svg);
+}
+
+::-webkit-scrollbar {
+    width: 2rem;
+    height: 2rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark);
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
+    border: 0.4rem solid var(--light);
 }
 
 
@@ -234,6 +255,9 @@ blockquote {
 
 
 
+
+
+
 /* Defaults.css */
 
 html {
@@ -275,7 +299,6 @@ video {
 
 main {
 	position: relative;
-	z-index: 1;
 	margin-inline: auto;
 }
 
@@ -304,6 +327,14 @@ button:not([type="submit"]):focus-visible {
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+.cookie-consent-banner .cookie_heading {
+	font-weight: 400;
+}
+
+.dark .cookie-consent-banner .cookie_heading {
+	font-weight: 300;
 }
 
 .dark .cookie-consent-banner {

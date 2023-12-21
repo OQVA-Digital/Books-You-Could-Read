@@ -20,7 +20,9 @@ html.dark p {
 .heading_ctnr {
     position: sticky;
     top: clamp(3rem, 6vw, 5rem);
-    mix-blend-mode: color-burn;
+    /* mix-blend-mode: color-burn; */
+    color: var(--light);
+    mix-blend-mode: difference;
     width: clamp(10rem, 85vw, 80rem);
     margin: 0 auto 4rem;
     height: fit-content;
@@ -186,6 +188,7 @@ html.dark .hero img {
 
 .back_to_top {
     position: fixed;
+    z-index: 3;
     bottom: 8rem;
     right: clamp(0rem, calc(10vw - 10rem), 2rem);
     width: 4rem;

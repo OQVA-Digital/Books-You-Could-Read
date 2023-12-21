@@ -1,6 +1,8 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import ThemeIcon from "./ThemeIcon.astro"
+
+import { YOUTUBE_CHANNEL, SPOTIFY_CHANNEL, APPLE_CHANNEL } from "../consts";
 ---
 
 <header id="start">
@@ -21,17 +23,23 @@ import ThemeIcon from "./ThemeIcon.astro"
 
 			<!-- <HeaderLink href="/about">About</HeaderLink> -->
 
-			<HeaderLink href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" target="_blank" class="external">
-				YouTube
-			</HeaderLink>
+			{YOUTUBE_CHANNEL ? (
+				<HeaderLink href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" target="_blank" class="external">
+					YouTube
+				</HeaderLink>
+			) : null}
 
-			<HeaderLink href="#" target="_blank" class="external">
-				Spotify
-			</HeaderLink>
+			{SPOTIFY_CHANNEL ? (
+				<HeaderLink href="#" target="_blank" class="external">
+					Spotify
+				</HeaderLink>
+			) : null}
 
-			<HeaderLink href="#" target="_blank" class="external">
-				iTunes
-			</HeaderLink>
+			{APPLE_CHANNEL ? (
+				<HeaderLink href="#" target="_blank" class="external">
+					iTunes
+				</HeaderLink>
+			) : null}
 		</nav>
 
 		<button class="menu_bt" type="button" name="toggle-menu-button">
@@ -55,7 +63,7 @@ import ThemeIcon from "./ThemeIcon.astro"
 	}
 
 	header > .ctnr {
-		height: clamp(4rem,31vmin,11rem);
+		height: var(--header-height);
 		display: flex;
 		align-items: center;
 		gap: 5rem;
