@@ -185,48 +185,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"books": {
-"01-the-prince-by-niccolo-machiavelli.md": {
-	id: "01-the-prince-by-niccolo-machiavelli.md";
-  slug: "01-the-prince-by-niccolo-machiavelli";
-  body: string;
-  collection: "books";
-  data: InferEntrySchema<"books">
-} & { render(): Render[".md"] };
-"02-1984-by-george-orwell.md": {
-	id: "02-1984-by-george-orwell.md";
-  slug: "02-1984-by-george-orwell";
-  body: string;
-  collection: "books";
-  data: InferEntrySchema<"books">
-} & { render(): Render[".md"] };
-"03-the-great-gatsby-by-f-scott-fitzgerald.md": {
-	id: "03-the-great-gatsby-by-f-scott-fitzgerald.md";
-  slug: "03-the-great-gatsby-by-f-scott-fitzgerald";
-  body: string;
-  collection: "books";
-  data: InferEntrySchema<"books">
-} & { render(): Render[".md"] };
-"04-the-alchemist-by-paulo-coelho.md": {
-	id: "04-the-alchemist-by-paulo-coelho.md";
-  slug: "04-the-alchemist-by-paulo-coelho";
-  body: string;
-  collection: "books";
-  data: InferEntrySchema<"books">
-} & { render(): Render[".md"] };
-"05-the-girl-on-the-train-by-paula-hawkins.md": {
-	id: "05-the-girl-on-the-train-by-paula-hawkins.md";
-  slug: "05-the-girl-on-the-train-by-paula-hawkins";
-  body: string;
-  collection: "books";
-  data: InferEntrySchema<"books">
-} & { render(): Render[".md"] };
-"06-the-brothers-karamazov-by-fyodor-dostoevsky.md": {
-	id: "06-the-brothers-karamazov-by-fyodor-dostoevsky.md";
-  slug: "06-the-brothers-karamazov-by-fyodor-dostoevsky";
-  body: string;
-  collection: "books";
-  data: InferEntrySchema<"books">
-} & { render(): Render[".md"] };
 };
 
 	};
