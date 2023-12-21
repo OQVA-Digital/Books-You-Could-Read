@@ -7,7 +7,7 @@ body {
 	background-color: var(--highlightBookColor, var(--c1));
 }
 
-p {
+article p {
     font-size: clamp(1.5rem, 4.2vmin, 1.9rem);
     font-weight: 370;
     margin: 1rem 0 1.5rem;

@@ -306,7 +306,69 @@ button:not([type="submit"]):focus-visible {
 	background-repeat: no-repeat;
 }
 
+.dark .cookie-consent-banner {
+    background-color: var(--dark);
+    background-image: linear-gradient(45deg, rgb(20 20 20 / 90%), rgb(20 20 20 / 90%)), url(/noise.svg);
+    border: 0.1rem solid var(--dark-a);
+}
 
+.cookie-consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    left: 1rem;
+    right: 1rem;
+    background-color: var(--light);
+    background-image: linear-gradient(45deg, rgb(245 245 245 / 60%), rgb(245 245 245 / 60%)), url(/noise.svg);
+    color: var(--dark);
+    color: var(--secondary-1);
+    padding: 2rem clamp(1.3rem,5vw,4rem) 2rem;
+    text-align: center;
+    z-index: 11;
+    margin-inline: auto;
+    width: 100%;
+    box-sizing: border-box;
+    width: var(--width);
+    border-radius: 1rem;
+    border: 0.1rem solid var(--light-c);
+}
+
+.dark .cookie-consent-banner .cookie_heading + p {
+    font-weight: 300;
+}
+
+.cookie-consent-banner .cookie_heading + p {
+    font-weight: 500;
+}
+
+.cookie-consent-button {
+	color: var(--dark);
+}
+
+.dark .cookie-consent-button {
+	color: var(--light);
+}
+
+.cookie-consent-button.accept {
+	color: var(--light);
+}
+
+.cookie-consent-button.accept_selection {
+    background-color: var(--light-a);
+}
+
+.dark .cookie-consent-button.accept_selection {
+    background-color: var(--dark-b);
+}
+
+.cookie-consent-button.reject {
+    background-color: var(--light-c);
+}
+
+.dark .cookie-consent-button.reject {
+    background-color: var(--dark-b);
+    border: 0.1rem solid var(--dark-a);
+}
 
 
 
@@ -343,4 +405,109 @@ button:not([type="submit"]):focus-visible {
 	html {
 		font-size: 22px;
 	}
+}
+
+
+
+
+
+
+
+
+/* RESETS */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, span {
+    margin: 0;
+    overflow-wrap: break-word;
+    cursor: inherit;
+}
+
+p:not(a > p), span:not(a > span) {
+    cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    width: fit-content;
+    font-weight: 600;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: unset;
+    cursor: pointer;
+}
+
+a h1, a h2, a h3, a h4, a h5, h5 {
+    cursor: pointer;
+}
+
+img {
+    user-select: none;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+video {
+    background-size: cover;
+    background-position: center;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    background-color: transparent;
+    outline-color: transparent;
+    border: unset;
+    padding: unset;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+button:focus-visible, button:not([type="submit"]):focus-visible {
+    outline: 0.1rem solid transparent;
+}
+
+ol, ul, li {
+    padding: 0;
+    list-style: none;
+    margin-block: 0;
+}
+
+hr {
+    border:none;
+    margin: unset;
+    height: 0.1rem;
+}
+
+noscript {
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: var(--light);
+    z-index: 10;
+    color: var(--dark);
+    margin-inline: auto;
+    padding: 1rem;
+    border: 0.2rem solid var(--highlight);
+    max-width: 80%;
+    inset: 0;
+    height: fit-content;
+    margin: auto;
 }

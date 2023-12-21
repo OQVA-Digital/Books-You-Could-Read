@@ -5,7 +5,7 @@
 <div id="cookie-consent-banner" class="cookie-consent-banner">
     <div class="flex">
         <div class="content">
-            <h3>Cookie settings</h3>
+            <p class="cookie_heading">Cookie settings</p>
             <p>We use cookies to provide you with the best possible experience. They also allow us to analyze user behavior in order to constantly improve the website for you.</p>
         </div>
     
@@ -78,25 +78,6 @@ function setConsent(consent) {
 
 <style>
 
-.cookie-consent-banner {
-    display: none;
-    position: fixed;
-    bottom: 2rem;
-    left: 1rem;
-    right: 1rem;
-    background-color: var(--dark);
-    color: var(--secondary-1);
-    padding: 2rem clamp(1.3rem,5vw,4rem) 2rem;
-    text-align: center;
-    z-index: 11;
-    margin-inline: auto;
-    width: 100%;
-    box-sizing: border-box;
-    width: var(--width);
-    border-radius: 1rem;
-    border: 0.2rem solid var(--light);
-}
-
 .cookie-consent-banner > .flex {
     flex-flow: row wrap;
     justify-content: center;
@@ -107,7 +88,7 @@ function setConsent(consent) {
 .cookie-consent-banner .content {
     flex: 1;
     min-width: 23rem;
-    max-width: 57rem;
+    max-width: 61rem;
     height: fit-content;
 }
 
@@ -118,21 +99,20 @@ function setConsent(consent) {
     gap: 1rem;
 }
 
-.cookie-consent-banner h3 {
-    /* color: var(--primary-c); */
+.cookie-consent-banner .cookie_heading {
     font-size: clamp(1.6rem,7vw,3rem);
     margin-bottom: 0.7rem;
-    font-weight: 600;
+    font-weight: 100;
     line-height: 1;
     width: auto;
+    font-family: 'YesevaOne';
 }
 
-.cookie-consent-banner h3 + p {
-    font-weight: 400;
+.cookie-consent-banner .cookie_heading + p {
     line-height: 1.4;
     margin-inline: auto;
-    font-size: clamp(0.8rem,3.4vw,1.5rem);
-    /* max-width: 80vw; */
+    margin-bottom: 0;
+    font-size: clamp(0.8rem,5.4vw,1.6rem);
 }
 
 .cookie-consent-banner .bt_ctnr {
@@ -148,18 +128,17 @@ function setConsent(consent) {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 4px;
-    font-weight: 500;
+    font-weight: 600;
     flex: 1;
     transition: box-shadow 0.15s ease;
-    color: var(--primary-a);
     border: 0.1rem solid transparent;
 }
 
 .cookie-consent-button:hover {
-    box-shadow: 0 0 1rem var(--primary-b);
+    box-shadow: 0 0 1rem var(--dark-a);
 }
 
 .cookie-consent-button:active {
@@ -168,16 +147,14 @@ function setConsent(consent) {
 
 .cookie-consent-button.accept {
     min-width: 100%;
-    background-color: var(--light);
+    background-color: var(--c1);
 }
 
 .cookie-consent-button.accept_selection {
-    background-color: var(--secondary-1);
-    color: var(--light);
+    border: 0.1rem solid var(--c1);
 }
 
 .cookie-consent-button.reject {
-    border: 0.2rem solid var(--secondary-2);
 }
 
 .cookie-consent-options {

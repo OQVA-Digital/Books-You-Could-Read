@@ -16,6 +16,7 @@ spotifyLink: ""
 spotifyEmbedURL: ""
 applePodcastsLink: ""
 applePodcastsEmbedURL: ""
+highlightColor: "#cd5119"
 ---
 
 'The Prince' by Niccolo Machiavelli, the book that makes politicians shiver with both excitement and fear. Published way back in 1532, this political treatise has certainly stood the test of time. Machiavelli's ideas have seen many a spirited debate, but one thing is for sure: he has given us a framework for modern political thought that still resonates today. Whether you're interested in power, warfare or governance, there are certainly some important lessons to be learned from this Machiavellic gem.
