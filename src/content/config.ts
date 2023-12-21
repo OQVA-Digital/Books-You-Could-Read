@@ -27,3 +27,4 @@ const books = defineCollection({
 });
 
 export const collections = { books };
+ 
