@@ -18,67 +18,78 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE, BRAND_NAME, FACE
 import { Schema } from "astro-seo-schema";
 ---
 
-<!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-<meta name="generator" content={Astro.generator} />
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5X2RKLG5');</script>
+    <!-- End Google Tag Manager -->
 
-<!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
+	<!-- Global Metadata -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+	<meta name="generator" content={Astro.generator} />
 
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+	<!-- Canonical URL -->
+	<link rel="canonical" href={canonicalURL} />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={OG_IMAGE} />
+	<!-- Primary Meta Tags -->
+	<title>{title}</title>
+	<meta name="title" content={title} />
+	<meta name="description" content={description} />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={OG_IMAGE} />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={Astro.url} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={OG_IMAGE} />
 
-    
-<Schema
-item={{
-	// WEBPAGE
-	"@context": "https://schema.org",
-	"@type":"WebPage",
-	"name":`${SITE_TITLE}`,
-	"url":`${Astro.url}`,
-	"description":`${SITE_DESCRIPTION}`,
-	"isPartOf":{
-		// WEBSITE
-		"@type":"WebSite",
-		"name":`${BRAND_NAME}`,
-		"@id":`${Astro.url}`,
-		"url":`${Astro.url.origin}`,
-			// ORGANIZATION
-			"publisher":{
-			"@type":"Organization",
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={Astro.url} />
+	<meta property="twitter:title" content={title} />
+	<meta property="twitter:description" content={description} />
+	<meta property="twitter:image" content={OG_IMAGE} />
+
+		
+	<Schema
+	item={{
+		// WEBPAGE
+		"@context": "https://schema.org",
+		"@type":"WebPage",
+		"name":`${SITE_TITLE}`,
+		"url":`${Astro.url}`,
+		"description":`${SITE_DESCRIPTION}`,
+		"isPartOf":{
+			// WEBSITE
+			"@type":"WebSite",
 			"name":`${BRAND_NAME}`,
-			"image": "/og/social-image.jpg",
-			"url":`${Astro.url}`,
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": "6-8 Bonhill Street",
-				"addressRegion": "London",
-				"addressLocality": "London",
-				"postalCode": "EC2A 4BX",
-				"addressCountry": "UK"
-			},
-			"sameAs":[
-				`${FACEBOOK_URL ? FACEBOOK_URL : ""}`
-			]
+			"@id":`${Astro.url}`,
+			"url":`${Astro.url.origin}`,
+				// ORGANIZATION
+				"publisher":{
+				"@type":"Organization",
+				"name":`${BRAND_NAME}`,
+				"image": "/og/social-image.jpg",
+				"url":`${Astro.url}`,
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "6-8 Bonhill Street",
+					"addressRegion": "London",
+					"addressLocality": "London",
+					"postalCode": "EC2A 4BX",
+					"addressCountry": "UK"
+				},
+				"sameAs":[
+					`${FACEBOOK_URL ? FACEBOOK_URL : ""}`
+				]
+				}
 			}
-		}
-}}
-/>
+	}}
+	/>
+
+</head>
