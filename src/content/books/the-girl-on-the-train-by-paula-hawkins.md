@@ -1,15 +1,23 @@
 ---
-title: "The Girl on the Train"
-bookAuthor: "Paula Hawkins"
-description: "'The Alchemist', the book that made millions dream of digging up their backyard in pursuit of hidden treasure. Paulo Coelho's international sensation has become a modern classic, inspiring countless readers with its philosophical musings and spiritual guidance. But let's not forget the journey of Santiago, the young shepherd with big dreams and an even bigger heart. With over 150 million copies sold, 'The Alchemist' has certainly earned its place in the literary canon. So, let's dive in and see what insights we can find in this beloved tale."
-pubDate: "Jun 01 2023"
-coverImage: "/book-covers/4-the-alchemist-by-paulo-coelho.jpg"
+title: The Girl on the Train
+bookAuthor: Paula Hawkins
+description: "'The Alchemist', the book that made millions dream of digging up
+  their backyard in pursuit of hidden treasure. Paulo Coelho's international
+  sensation has become a modern classic, inspiring countless readers with its
+  philosophical musings and spiritual guidance. But let's not forget the journey
+  of Santiago, the young shepherd with big dreams and an even bigger heart. With
+  over 150 million copies sold, 'The Alchemist' has certainly earned its place
+  in the literary canon. So, let's dive in and see what insights we can find in
+  this beloved tale."
+pubDate: Jun 01 2023
+coverImage: /book-covers/4-the-alchemist-by-paulo-coelho.jpg
 affiliateLink: ""
 youTubeLink: ""
 spotifyLink: ""
 spotifyEmbedURL: ""
 applePodcastsLink: ""
 applePodcastsEmbedURL: ""
+highlightColor: "#7c69d7"
 ---
 
 I have always found that the best stories are the ones that keep me on the edge of my seat, my heart racing and my mind reeling. Paula Hawkins' 'The Girl on the Train' is one such story that lives up to the hype. With its intricate web of lies and deceit, the novel takes us on a journey through the mind of a troubled and unreliable narrator, leaving us questioning everything we think we know. It is a story that dives deep into the human psyche, exploring themes of obsession, addiction, and the darker aspects of human nature. Simply put, 'The Girl on the Train' is a must-read for anyone who loves a good psychological thriller that will keep them guessing until the very end.
