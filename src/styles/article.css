@@ -19,10 +19,7 @@ html.dark p {
 
 .heading_ctnr {
     position: sticky;
-    top: clamp(3rem, 6vw, 5rem);
-    /* mix-blend-mode: color-burn; */
-    /* color: var(--light); */
-    /* mix-blend-mode: difference; */
+    top: clamp(3rem, 16vw, 8rem);
     width: clamp(10rem, 85vw, 80rem);
     margin: 7rem auto 5rem;
     height: fit-content;
@@ -33,9 +30,8 @@ main .back {
     height: 4rem;
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: right;
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 0;
     background-color: var(--light);
@@ -46,6 +42,7 @@ main .back {
     -moz-border-radius: 0 0 0.2rem 0;
     -ms-border-radius: 0 0 0.2rem 0;
     -o-border-radius: 0 0 0.2rem 0;
+    z-index: 1;
 }
 
 .dark main .back {
@@ -175,6 +172,7 @@ code {
 .hero {
     flex-direction: column;
     margin-bottom: clamp(3rem, 10vw, 8rem);
+    margin-top: -4rem;
 }
 
 .hero img {
@@ -243,23 +241,173 @@ html.dark .hero img {
     gap: 3rem;
 }
 
-.back_to_top {
-    position: fixed;
+.bottom_bts {
+    position: sticky;
+    bottom: 2rem;
+    display: flex;
     z-index: 3;
-    bottom: 8rem;
-    right: clamp(0rem, calc(10vw - 10rem), 2rem);
+    margin-bottom: 2rem;
+    color: var(--dark-a);
+}
+
+.dark .bottom_bts {
+    color: var(--light);
+}
+
+.share {
+    left: var(--corner-width);
+}
+
+.bottom_bts .share .anchors {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: calc(100% + 2rem);
+    padding-left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0.4rem);
+    -webkit-transform: translateY(0.4rem);
+    -moz-transform: translateY(0.4rem);
+    -ms-transform: translateY(0.4rem);
+    -o-transform: translateY(0.4rem);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    -moz-transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    -ms-transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    -o-transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.bottom_bts .share:hover .anchors {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0rem);
+    -webkit-transform: translateY(0rem);
+    -moz-transform: translateY(0rem);
+    -ms-transform: translateY(0rem);
+    -o-transform: translateY(0rem);
+    transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.1s ease;
+    -webkit-transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.1s ease;
+    -moz-transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.1s ease;
+    -ms-transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.1s ease;
+    -o-transition: opacity 0.1s ease, visibility 0.1s ease, transform 0.1s ease;
+}
+
+.bottom_bts .anchors .ctnr {
+    position: relative;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light);
+    font-size: 1.6rem;
+    width: max-content;
+    /*border: 0.1rem solid var(--highlightBookColor, var(--c1));
+    */background-color: var(--highlightBookColor, var(--c1));
+    font-weight: 600;
+    color: var(--dark-b);
+    border-radius: 0.3rem 0.3rem 0.3rem 0;
+    -webkit-border-radius: 0.3rem 0.3rem 0.3rem 0;
+    -moz-border-radius: 0.3rem 0.3rem 0.3rem 0;
+    -ms-border-radius: 0.3rem 0.3rem 0.3rem 0;
+    -o-border-radius: 0.3rem 0.3rem 0.3rem 0;
+}
+
+.bottom_bts .anchors .ctnr::before {
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 99%;
+    border-left: 0.6rem solid var(--highlightBookColor, var(--c1));
+    border-top: 0.6rem solid var(--highlightBookColor, var(--c1));
+    border-right: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+}
+
+.bottom_bts .anchors .heading {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    font-weight: 600;
+    color: var(--highlightBookColor, var(--c1));
+}
+
+.bottom_bts .anchors a {
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.bottom_bts .anchors a:hover {
+    background-color: rgba(255,255,255,0.1);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.bottom_bts .anchors hr {
+    width: 3rem;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.bottom_bts > a, .bottom_bts .share {
     width: 4rem;
     height: 4rem;
-    border-radius: 0.2rem 0 0 0.2rem;
+    border: 0.1rem solid var(--light-c);
+    background-color: var(--light-c);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -webkit-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -moz-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -ms-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -o-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+}
+
+.bottom_bts > a svg, .bottom_bts .share svg {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.dark .bottom_bts > a, .dark .bottom_bts .share {
+    border: 0.1rem solid var(--dark-a);
+    background-color: var(--dark-b);
+}
+
+.bottom_bts > a:hover, .bottom_bts .share:hover  {
+    background-color: var(--light);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.dark .bottom_bts > a:hover, .dark .bottom_bts .share:hover {
     background-color: var(--dark-a);
-    background-image: url(/icons/up.svg);
-    background-repeat: no-repeat;
-    background-size: 1.6rem;
-    background-position: center;
-    opacity:0;
+}
+
+.back_to_top {
+    right: var(--corner-width);
+    opacity: 0;
     visibility: hidden;
-    transform:translateY(0.6rem);
-    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    transform: translateY(0.6rem);
+    display: block;
+    margin-left: auto;
 }
 
 .back_to_top.show {
@@ -311,7 +459,10 @@ html.dark .hero img {
     }
 
     .back_to_top {
-        border-radius: 0.2rem;
-        bottom: 2rem;
+        right:2rem;
+    }
+
+    .share {
+        left: 2rem;
     }
 }

@@ -20,11 +20,11 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "pubDate", widget: "datetime"}
       - {label: "Cover Image", name: "coverImage", widget: "image", required: false}
+      - {label: "Highlight Color", name: "highlightColor", widget: "color", required: false}
       - {label: "AffiliateLink", name: "affiliateLink", widget: "string", required: false}
       - {label: "YouTubeLink", name: "youTubeLink", widget: "string", required: false}
       - {label: "SpotifyLink", name: "spotifyLink", widget: "string", required: false}
       - {label: "SpotifyEmbedURL", name: "spotifyEmbedURL", widget: "string", required: false}
       - {label: "ApplePodcastsLink", name: "applePodcastsLink", widget: "string", required: false}
       - {label: "ApplePodcastsEmbedURL", name: "applePodcastsEmbedURL", widget: "string", required: false}
-      - {label: "Highlight Color", name: "highlightColor", widget: "color", required: false}
       - {label: "Body", name: "body", widget: "markdown"}

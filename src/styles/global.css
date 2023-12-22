@@ -71,17 +71,26 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--dark);
+    background: #ffffff;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background: var(--dark);
+    border: 0.7rem solid #ffffff;
+}
+
+.dark ::-webkit-scrollbar-thumb  {
     background: var(--light);
-    border-radius: 0.6rem;
-    -webkit-border-radius: 0.6rem;
-    -moz-border-radius: 0.6rem;
-    -ms-border-radius: 0.6rem;
-    -o-border-radius: 0.6rem;
-    border: 0.7rem solid var(--dark);
+    border: 0.7rem solid #000000;
 }
 
 
@@ -318,6 +327,7 @@ button:not([type="submit"]):focus-visible {
     background-color: var(--dark);
     background-image: linear-gradient(45deg, rgb(20 20 20 / 90%), rgb(20 20 20 / 90%)), url(/noise.svg);
     border: 0.1rem solid var(--dark-a);
+    box-shadow: 0 1rem 5rem 2rem var(--dark-b);
 }
 
 .cookie-consent-banner {
@@ -330,19 +340,20 @@ button:not([type="submit"]):focus-visible {
     background-image: linear-gradient(45deg, rgb(245 245 245 / 60%), rgb(245 245 245 / 60%)), url(/noise.svg);
     color: var(--dark);
     color: var(--secondary-1);
-    padding: 2rem clamp(1.3rem,5vw,4rem) 2rem;
+    padding: 2.5rem clamp(1.3rem,5vw,4rem) 2rem;
     text-align: center;
     z-index: 11;
     margin-inline: auto;
     width: 100%;
     box-sizing: border-box;
-    width: var(--width);
+    width: clamp(10rem, 85%, 150rem);
     border-radius: 0.3rem;
     border: 0.1rem solid var(--light-c);
     -webkit-border-radius: 0.3rem;
     -moz-border-radius: 0.3rem;
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
+    box-shadow: 0 2rem 4rem var(--light-b);
 }
 
 .dark .cookie-consent-banner .cookie_heading + p {

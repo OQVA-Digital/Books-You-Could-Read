@@ -11,6 +11,9 @@ import YouTube from '../../components/svg/icons/YouTube.astro';
 import Spotify from '../../components/svg/icons/Spotify.astro';
 import ApplePodcasts from '../../components/svg/icons/ApplePodcasts.astro';
 
+import Up from '../../components/svg/icons/Up.astro'
+import Share from '../../components/svg/icons/Share.astro'
+
 type Props = CollectionEntry<'books'>;
 
 export async function getStaticPaths() {
@@ -52,27 +55,23 @@ const highlightBookColor = book.data.highlightColor;
 				</h1>
 
 				<div class="link_ctnr">
-					{String(book.data.youTubeLink).startsWith('http') ? <a href={book.data.youTubeLink} class="youtube icon" target="_blank" title="Listen on YouTube">
-						<YouTube/>
-					</a> : <a href={YOUTUBE_CHANNEL} class="youtube icon" target="_blank" title="Listen on YouTube">
-						<YouTube/>
-					</a>}
+					{book.data.youTubeLink ? (
+						<a href={book.data.youTubeLink} class="icon" target="_blank" title="Listen on YouTube">
+							<YouTube/>
+						</a>
+					) : null}
 
-					{String(book.data.spotifyLink).startsWith('http') ? <a href={book.data.spotifyLink} class="spotify icon" target="_blank" title="Listen on Spotify">
-						<Spotify/>
-					</a> : <a href={SPOTIFY_CHANNEL} class="spotify icon" target="_blank" title="Listen on Spotify">
-						<Spotify/>
-					</a>}
+					{book.data.spotifyLink ? (
+						<a href={book.data.spotifyLink} class="icon" target="_blank" title="Listen on Spotify">
+							<Spotify/>
+						</a>
+					) : null}
 
-					{String(book.data.applePodcastsLink).startsWith('http') ? <a href={book.data.applePodcastsLink} class="spotify icon" target="_blank" title="Listen on Apple Podcasts">
-						<ApplePodcasts/>
-					</a> : <a href={APPLE_CHANNEL} class="apple_podcasts icon" target="_blank" title="Listen on Apple Podcasts">
-						<ApplePodcasts/>
-					</a>}
-
-					<!-- <a href={spotifyLink} class="spotify icon" target="_blank"></a> -->
-					
-					<!-- <a href={applePodcastLink} class="apple_podcasts icon" target="_blank"></a> -->
+					{book.data.applePodcastsLink ? (
+						<a href={book.data.applePodcastsLink} class="icon" target="_blank" title="Listen on Apple Podcasts">
+							<ApplePodcasts/>
+						</a>
+					) : null}
 				</div>
 			</div>
 			{
@@ -111,7 +110,32 @@ const highlightBookColor = book.data.highlightColor;
 		</div>
 	</main>
 
-	<a href="#start" class="back_to_top" title="back to top" aria-label="back to top"></a>
+	<div class="bottom_bts">
+		<div class="share" role="button">
+			<div class="anchors">
+				<div class="ctnr">
+					<span class="heading">Share on...</span>
+
+					<a href={`https://www.facebook.com/sharer.php?u=${Astro.url}`} aria-label="Share on Facebook">Facebook</a>
+
+					<hr>
+
+					<a href={`https://twitter.com/intent/tweet
+						?url=${Astro.url}`} aria-label="Share on Twitter">Twitter</a>
+					
+					<hr>
+					
+					<a href={`https://www.linkedin.com/sharing/share-offsite/?url=${Astro.url}`} aria-label="Share on LinkedIn">LinkedIn</a>
+				</div>
+			</div>
+
+			<Share/>
+		</div>
+
+		<a href="#start" class="back_to_top" title="back to top" aria-label="back to top">
+			<Up/>
+		</a>
+	</div>
 </Layout>
 
 
