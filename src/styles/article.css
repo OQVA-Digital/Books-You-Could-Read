@@ -8,13 +8,13 @@ body {
 }
 
 article p {
-    font-size: clamp(1.5rem, 4.2vmin, 1.9rem);
+    font-size: clamp(1.5rem,3.6vmin,2rem);
     font-weight: 370;
     margin: 1rem 0 1.5rem;
 }
 
 html.dark p {
-    font-weight: 280;
+    font-weight: 320;
 }
 
 .heading_ctnr {
@@ -24,19 +24,35 @@ html.dark p {
     /* color: var(--light); */
     /* mix-blend-mode: difference; */
     width: clamp(10rem, 85vw, 80rem);
-    margin: 0 auto 4rem;
+    margin: 7rem auto 5rem;
     height: fit-content;
 }
 
-.heading_ctnr .back {
-    width: 4rem;
+main .back {
+    width: calc(clamp(4rem,11vmin,5rem) + var(--corner-width));
     height: 4rem;
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: right;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--light);
+    padding-inline: 2rem;
+    box-sizing: border-box;
+    border-radius: 0 0 0.2rem 0;
+    -webkit-border-radius: 0 0 0.2rem 0;
+    -moz-border-radius: 0 0 0.2rem 0;
+    -ms-border-radius: 0 0 0.2rem 0;
+    -o-border-radius: 0 0 0.2rem 0;
 }
 
-.heading_ctnr .back span {
+.dark main .back {
+    background-color: var(--dark-b);
+}
+
+main .back span {
     width: 0.6rem;
     height: 0.6rem;
     border-top: solid var(--light-b);
@@ -56,7 +72,7 @@ html.dark p {
     -o-transform: translateX(0.3rem) rotate(-45deg);
 }
 
-.heading_ctnr .back:hover span {
+main .back:hover span {
     border-top-color: var(--highlightBookColor, var(--c1));
     border-left-color: var(--highlightBookColor, var(--c1));
     transition: border-color 0s ease;
@@ -66,25 +82,32 @@ html.dark p {
     -o-transition: border-color 0s ease;
 }
 
-.heading_ctnr .back p {
-    margin: 0.6rem 0 0 1rem;
-    font-size: 2rem;
+main .back p {
+    padding: 0.3rem 0 0 1rem;
+    font-size: 1.6rem;
     color: var(--highlightBookColor, var(--c1));
-    font-weight: 400;
-    transform: translateX(-1rem);
+    font-weight: 600;
+    transform: translate(-1rem);
     -webkit-transform: translateX(-1rem);
     -moz-transform: translateX(-1rem);
     -ms-transform: translateX(-1rem);
     -o-transform: translateX(-1rem);
     opacity: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    -webkit-transition: transform 0.2s ease, opacity 0.2s ease;
-    -moz-transition: transform 0.2s ease, opacity 0.2s ease;
-    -ms-transition: transform 0.2s ease, opacity 0.2s ease;
-    -o-transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform .2s ease,opacity .1s ease;
+    -webkit-transition: transform .2s ease,opacity .1s ease;
+    -moz-transition: transform .2s ease,opacity .1s ease;
+    -ms-transition: transform .2s ease,opacity .1s ease;
+    -o-transition: transform .2s ease,opacity .1s ease;
+    position: absolute;
+    left: 100%;
+    width: max-content;
 }
 
-.heading_ctnr .back:hover p {
+.dark main .back p {
+    font-weight: 350;
+}
+
+main .back:hover p {
     transform: translateX(0rem);
     -webkit-transform: translateX(0rem);
     -moz-transform: translateX(0rem);
@@ -112,11 +135,7 @@ html.dark p {
 }
 
 .comma {
-    color:var(--light-c)
-}
-
-html.dark .comma {
-    color: var(--light-b);
+    color:var(--highlightBookColor, var(--c1));
 }
 
 .title .small {
@@ -125,8 +144,8 @@ html.dark .comma {
     margin-top: 1rem;
 }
 
-.title .authorship {
-
+h1 .authorship, code {
+    color: var(--highlightBookColor, var(--c1));
 }
 
 html.dark .heading_ctnr {
@@ -273,7 +292,7 @@ html.dark .hero img {
     }
 
     .heading_ctnr {
-        margin: 2rem auto 8rem 0;
+        margin: 8rem auto 8rem 0;
         width: 50%;
         box-sizing: border-box;
         padding-left: var(--corner-width);

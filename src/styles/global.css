@@ -66,22 +66,22 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 2rem;
+    width: 1.8rem;
     height: 2rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--light);
+    background: var(--dark);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--dark);
+    background: var(--light);
     border-radius: 0.6rem;
     -webkit-border-radius: 0.6rem;
     -moz-border-radius: 0.6rem;
     -ms-border-radius: 0.6rem;
     -o-border-radius: 0.6rem;
-    border: 0.4rem solid var(--light);
+    border: 0.7rem solid var(--dark);
 }
 
 
