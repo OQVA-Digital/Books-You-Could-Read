@@ -205,34 +205,6 @@ html.dark .hero img {
     margin-right: 1rem;
 }
 
-.affiliate_link {
-    position: sticky;
-    bottom: 1.5rem;
-    background-color: var(--highlightBookColor, var(--c1));
-    width: 100%;
-    display: block;
-    padding: clamp(0.6rem, 3vw, 0.9rem) 0;
-    color: var(--light);
-    text-align: center;
-    font-family: "YesevaOne", serif;
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
-    font-weight: 300;
-    margin: clamp(4rem, 5vw, 8rem) auto 12rem;
-    border-radius: 0.2rem;
-    max-width: 80rem;
-    transition: filter 0.6s ease;
-    -webkit-transition: filter 0.6s ease;
-    -moz-transition: filter 0.6s ease;
-    -ms-transition: filter 0.6s ease;
-    -o-transition: filter 0.6s ease;
-}
-
-.affiliate_link:hover {
-    transition: filter 0s ease;
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-}
-
 .embed_ctnr {
     max-width: clamp(10rem, 85vw, 80rem);
     margin: 0 auto 5rem;
@@ -248,6 +220,9 @@ html.dark .hero img {
     z-index: 3;
     margin-bottom: 2rem;
     color: var(--dark-a);
+    gap: clamp(1rem, 3vw, 2rem);
+    width: 100%;
+    justify-content: space-between;
 }
 
 .dark .bottom_bts {
@@ -255,7 +230,7 @@ html.dark .hero img {
 }
 
 .share {
-    left: var(--corner-width);
+    margin-left: var(--corner-width);
 }
 
 .bottom_bts .share .anchors {
@@ -357,7 +332,7 @@ html.dark .hero img {
     background-color: rgba(255,255,255,0.2);
 }
 
-.bottom_bts > a, .bottom_bts .share {
+.back_to_top, .share {
     width: 4rem;
     height: 4rem;
     border: 0.1rem solid var(--light-c);
@@ -378,17 +353,17 @@ html.dark .hero img {
     -o-border-radius: 0.2rem;
 }
 
-.bottom_bts > a svg, .bottom_bts .share svg {
+.back_to_top svg, .bottom_bts .share svg {
     width: 1.6rem;
     height: 1.6rem;
 }
 
-.dark .bottom_bts > a, .dark .bottom_bts .share {
+.dark .back_to_top, .dark .bottom_bts .share {
     border: 0.1rem solid var(--dark-a);
     background-color: var(--dark-b);
 }
 
-.bottom_bts > a:hover, .bottom_bts .share:hover  {
+.back_to_top:hover, .bottom_bts .share:hover  {
     background-color: var(--light);
     transition: background-color 0s ease;
     -webkit-transition: background-color 0s ease;
@@ -397,17 +372,16 @@ html.dark .hero img {
     -o-transition: background-color 0s ease;
 }
 
-.dark .bottom_bts > a:hover, .dark .bottom_bts .share:hover {
+.dark .back_to_top:hover, .dark .bottom_bts .share:hover {
     background-color: var(--dark-a);
 }
 
 .back_to_top {
-    right: var(--corner-width);
+    margin-right: var(--corner-width);
     opacity: 0;
     visibility: hidden;
     transform: translateY(0.6rem);
-    display: block;
-    margin-left: auto;
+    /* margin-left: auto; */
 }
 
 .back_to_top.show {
@@ -415,6 +389,38 @@ html.dark .hero img {
     visibility: visible;
     transform:translateY(0);
 }
+
+.affiliate_link {
+    background-color: var(--highlightBookColor, var(--c1));
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light);
+    text-align: center;
+    font-family: "YesevaOne", serif;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    font-weight: 300;
+    border-radius: 0.2rem;
+    max-width: 80rem;
+    transition: filter 0.6s ease;
+    -webkit-transition: filter 0.6s ease;
+    -moz-transition: filter 0.6s ease;
+    -ms-transition: filter 0.6s ease;
+    -o-transition: filter 0.6s ease;
+    flex: 1;
+}
+
+.affiliate_link:hover {
+    transition: filter 0s ease;
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+
+
+
 
 
 
@@ -459,10 +465,10 @@ html.dark .hero img {
     }
 
     .back_to_top {
-        right:2rem;
+        margin-right:2rem;
     }
 
     .share {
-        left: 2rem;
+        margin-left: 2rem;
     }
 }
