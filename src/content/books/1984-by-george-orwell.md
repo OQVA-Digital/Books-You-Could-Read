@@ -14,6 +14,7 @@ spotifyLink: ""
 spotifyEmbedURL: ""
 applePodcastsLink: ""
 applePodcastsEmbedURL: ""
+highlightColor: "#71ca27"
 ---
 George Orwell's '1984' changed literature forever. With its bleak portrayal of a future ruled by Big Brother and his omnipresent, dictatorial regime, this dystopian work has left an indelible mark on our literary landscape. So let's strap on our dystopian goggles and dig deep into the world of '1984'.
 
