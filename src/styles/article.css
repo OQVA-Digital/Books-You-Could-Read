@@ -52,8 +52,8 @@ main .back {
 main .back span {
     width: 0.6rem;
     height: 0.6rem;
-    border-top: solid var(--light-b);
-    border-left: solid var(--light-b);
+    border-top: solid var(--highlightBookColor, var(--c1));
+    border-left: solid var(--highlightBookColor, var(--c1));
     border-bottom: solid transparent;
     border-right: solid transparent;
     border-width: 0.5rem;
@@ -70,8 +70,8 @@ main .back span {
 }
 
 main .back:hover span {
-    border-top-color: var(--highlightBookColor, var(--c1));
-    border-left-color: var(--highlightBookColor, var(--c1));
+    border-top-color: var(--light-b);
+    border-left-color: var(--light-b);
     transition: border-color 0s ease;
     -webkit-transition: border-color 0s ease;
     -moz-transition: border-color 0s ease;
@@ -136,7 +136,7 @@ main .back:hover p {
 }
 
 .title .small {
-    font-size: clamp(1rem, 5vmin, 3rem);
+    font-size: clamp(1rem, 6vmin, 3rem);
     display: block;
     margin-top: 1rem;
 }

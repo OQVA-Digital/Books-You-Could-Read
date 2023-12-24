@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import "../styles/home.css"
+import "../styles/books.css"
 
 import YouTube from '../components/svg/icons/YouTube.astro'
 import ApplePodcasts from '../components/svg/icons/ApplePodcasts.astro'
@@ -9,11 +10,17 @@ import Instagram from '../components/svg/icons/Instagram.astro'
 import Facebook from '../components/svg/icons/Facebook.astro'
 import TikTok from '../components/svg/icons/TikTok.astro'
 import Twitter from '../components/svg/icons/Twitter.astro'
+
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+const books = (await getCollection('books')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() 
+);
 ---
 
 <Layout>
 	<main>
-		<div class="intro">
+		<section class="intro">
 			<div class="flex">
 				<div class="link_ctnr">
 					<a href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" class="youtube icon" target="_blank" title="YouTube">
@@ -56,6 +63,23 @@ import Twitter from '../components/svg/icons/Twitter.astro'
 					<hr>
 				</a>
 			</div>
-		</div>
+		</section>
+
+		<section class="books">
+			<h2>Latest Reads</h2>
+
+			<ul class="books_list">
+				{books.slice(0, 3).map((book) => (
+				  <li id={(book.data.title).toLowerCase().replace(/\s+/g, '-')}>
+					<a href={`/books/${book.slug}/`} style={{ '--highlight-color': book.data.highlightColor }}>
+					  <span class="title">{book.data.title}</span>, <span class="authorship">by {book.data.bookAuthor}</span>
+					</a>
+					<hr />
+				  </li>
+				))}
+			</ul>
+
+			<a href="/books" class="see_more"></a>
+		</section>
 	</main>
 </Layout>

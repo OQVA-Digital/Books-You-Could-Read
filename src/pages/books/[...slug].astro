@@ -36,7 +36,7 @@ const highlightBookColor = book.data.highlightColor;
 
 <style define:vars={{ highlightBookColor }}></style>
 
-<Layout {...book.data} title={`About ${book.data.title}, by ${book.data.bookAuthor} | Books You Could Read!`}>
+<Layout {...book.data} title={`${book.data.title}, by ${book.data.bookAuthor} | Books You Could Read!`}>
 	<main>
 		<HeaderLink href={`/books#${(book.data.title).toLowerCase().replace(/\s+/g, '-')}`}`} class="back" title="Return to Books">
 			<span></span>
@@ -130,7 +130,7 @@ const highlightBookColor = book.data.highlightColor;
 			<Share/>
 		</div>
 
-		{String(book.data.affiliateLink).startsWith('http') ? <a href={book.data.affiliateLink} target="_blank" rel="noopener noreferrer" class="affiliate_link external">Like it? Buy it! Read it!</a> : ""}
+		{String(book.data.affiliateLink).startsWith('http') ? <a href={book.data.affiliateLink} target="_blank" rel="noopener noreferrer" class="affiliate_link external" title="You will be taken to Amazon" aria-label="Buy this book">Like it? Buy it! Read it!</a> : ""}
 
 		<a href="#start" class="back_to_top" title="back to top" aria-label="back to top">
 			<Up/>

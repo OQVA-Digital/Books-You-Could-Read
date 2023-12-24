@@ -85,6 +85,27 @@ main {
     gap: 1rem;
 }
 
+.books h2 {
+    text-align: center;
+    display: block;
+    font-size: clamp(1.6rem, 5.5vmin, 2.5rem);
+    margin: 0 auto 1rem;
+    color: var(--light-b);
+    font-weight: 500;
+}
+
+.books_list {
+    margin-bottom: calc(50vh - (clamp(4rem,31vmin,11rem)));
+}
+
+.books .authorship {
+    display: block;
+    font-size: clamp(1.6rem, 5.5vmin, 2.5rem);
+    color: var(--light-b);
+}
+
+
+
 
 @media (min-width:900px) {
     .intro {

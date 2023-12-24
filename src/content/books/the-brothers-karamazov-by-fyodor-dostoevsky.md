@@ -17,7 +17,7 @@ spotifyLink: ""
 spotifyEmbedURL: ""
 applePodcastsLink: ""
 applePodcastsEmbedURL: ""
-highlightColor: "#a2b02f"
+highlightColor: "#889800"
 ---
 
 The Brothers Karamazov, a novel so epic in its exploration of philosophical and moral ideas that it could make even the most hardened reader want to throw themselves off a cliff. But fear not, dear reader, for I am here to guide you through the dense thicket of Dostoevsky's masterpiece. We'll explore the themes of family dysfunction, jealousy, love, and religious faith in all their glory, with occasional detours into unexpected metaphors and irreverent humour. So, buckle up and get ready for a wild ride into the heart of Russian literature.
