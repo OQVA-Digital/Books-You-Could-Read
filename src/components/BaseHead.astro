@@ -16,6 +16,14 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE, BRAND_NAME, FACEBOOK_URL } from "../consts";
 
 import { Schema } from "astro-seo-schema";
+
+interface ScrollRevealObject {
+    reveal: (selector: string, options?: any) => void;
+}
+
+declare global {
+  function ScrollReveal(): ScrollRevealObject;
+}
 ---
 
 <head>
@@ -26,6 +34,28 @@ import { Schema } from "astro-seo-schema";
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5X2RKLG5');</script>
     <!-- End Google Tag Manager -->
+
+	<script is:inline src="/js/scrollreveal.min.js"></script>
+
+	<script>
+		ScrollReveal().reveal('.reveal', {
+			distance: '0.4rem',
+			origin: 'bottom',
+			opacity: 0,
+			duration:800,
+			easing: 'ease',
+		});
+	
+		ScrollReveal().reveal('.books_list li', {
+			distance: '0.4rem',
+			origin: 'bottom',
+			opacity: 0,
+			duration:800,
+			easing: 'ease',
+			interval:50,
+		});
+	</script>
+	
 
 	<!-- Global Metadata -->
 	<meta charset="utf-8" />

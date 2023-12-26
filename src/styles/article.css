@@ -25,6 +25,11 @@ html.dark p {
     height: fit-content;
 }
 
+.heading_ctnr .description {
+    font-size: clamp(1rem, 4.3vmin, 1.9rem);
+    max-width: 61rem;
+}
+
 main .back {
     width: calc(clamp(4rem,11vmin,5rem) + var(--corner-width));
     height: 4rem;
@@ -175,19 +180,20 @@ code {
     margin-top: -4rem;
 }
 
-.hero picture {
-    max-height: 100vh;
-}
-
-.hero img, .hero picture {
+.hero img {
     margin-inline: auto;
+    max-height: 100vh;
     object-fit: cover;
     width: 100%;
     object-position: top;
     background-color: var(--light);
 }
 
-html.dark .hero img, html.dark .hero picture {
+.hero .link_ctnr {
+    margin-bottom: 3rem;
+}
+
+html.dark .hero img {
     background-color: var(--dark-b);
 }
 
@@ -450,13 +456,10 @@ html.dark .hero img, html.dark .hero picture {
         border-color: var(--dark-b);
     }
 
-    .hero picture {
+    .hero img {
+        margin-inline: unset;
         width: 50%;
         max-width: 80rem;
-    }
-
-    .hero img, .hero picture {
-        margin-inline: unset;
     }
 
     .heading_ctnr {

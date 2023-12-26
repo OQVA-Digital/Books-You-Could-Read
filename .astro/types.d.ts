@@ -190,42 +190,42 @@ declare module 'astro:content' {
   slug: "1984-by-george-orwell";
   body: string;
   collection: "books";
-  data: any
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 "the-alchemist-by-paulo-coelho.md": {
 	id: "the-alchemist-by-paulo-coelho.md";
   slug: "the-alchemist-by-paulo-coelho";
   body: string;
   collection: "books";
-  data: any
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 "the-brothers-karamazov-by-fyodor-dostoevsky.md": {
 	id: "the-brothers-karamazov-by-fyodor-dostoevsky.md";
   slug: "the-brothers-karamazov-by-fyodor-dostoevsky";
   body: string;
   collection: "books";
-  data: any
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 "the-girl-on-the-train-by-paula-hawkins.md": {
 	id: "the-girl-on-the-train-by-paula-hawkins.md";
   slug: "the-girl-on-the-train-by-paula-hawkins";
   body: string;
   collection: "books";
-  data: any
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 "the-great-gatsby-by-f-scott-fitzgerald.md": {
 	id: "the-great-gatsby-by-f-scott-fitzgerald.md";
   slug: "the-great-gatsby-by-f-scott-fitzgerald";
   body: string;
   collection: "books";
-  data: any
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 "the-prince-by-niccolo-machiavelli.md": {
 	id: "the-prince-by-niccolo-machiavelli.md";
   slug: "the-prince-by-niccolo-machiavelli";
   body: string;
   collection: "books";
-  data: any
+  data: InferEntrySchema<"books">
 } & { render(): Render[".md"] };
 };
 
@@ -237,5 +237,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("../src/content/config");
 }

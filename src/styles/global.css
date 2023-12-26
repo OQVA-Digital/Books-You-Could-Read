@@ -1,26 +1,25 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+
+html.sr .reveal, html.sr .books_list li {
+    visibility: hidden;
+}
 
 @font-face {
 	font-family: 'YesevaOne';
-	src: url('/fonts/YesevaOne-Regular.ttf');
+	src: local("YesevaOne"), url('/fonts/YesevaOne-Regular.ttf');
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Josefin';
-	src: url('/fonts/JosefinSans-VariableFont_wght.ttf');
+	src: local("Josefin"), url('/fonts/JosefinSans-VariableFont_wght.ttf');
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Josefin';
-	src: url('/fonts/JosefinSans-Italic-VariableFont_wght.ttf');
+	src: local("Josefin"), url('/fonts/JosefinSans-Italic-VariableFont_wght.ttf');
 	font-style: italic;
 	font-display: swap;
 }
@@ -102,7 +101,7 @@ body {
 
 .link_ctnr a {
     width: 3.2rem;
-    height: clamp(2.2rem, 6vw, 2.5rem);
+    height: clamp(2.2rem, 6vw, 2.1rem);
     transition: filter 0.9s ease;
 }
 
@@ -534,3 +533,20 @@ noscript {
     height: fit-content;
     margin: auto;
 }
+
+
+
+#themeToggle {
+    background: none;
+    position: absolute;
+    right: clamp(0.5rem,1.6vw,1.8rem);
+    top: clamp(0.5rem,1.6vw,1.8rem);
+    cursor: pointer;
+    width: clamp(2rem,5.2vw,2.5rem);
+    height: clamp(2rem,5.2vw,2.5rem);
+    color: var(--dark-b);
+  }
+
+  .dark #themeToggle {
+    color: var(--light-c);
+  }

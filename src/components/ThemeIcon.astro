@@ -17,17 +17,9 @@
 </button>
 
 <style>
-  #themeToggle {
-    background: none;
-    position: absolute;
-    right: clamp(0.5rem,1.6vw,1.8rem);
-    top: clamp(0.5rem,1.6vw,1.8rem);
-    cursor: pointer;
-    width: clamp(2rem, 5.5vw, 2.5rem);
-    height: clamp(2rem, 5.5vw, 2.5rem);
-  }
+
   .sun {
-    fill: black;
+    fill: currentColor;
   }
   .moon {
     fill: transparent;
@@ -37,7 +29,7 @@
     fill: transparent;
   }
   :global(.dark) .moon {
-    fill: white;
+    fill: currentColor;
   }
 </style>
 

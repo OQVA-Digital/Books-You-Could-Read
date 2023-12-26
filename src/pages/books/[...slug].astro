@@ -33,14 +33,14 @@ const books = (await getCollection('books')).sort(
 
 const highlightBookColor = book.data.highlightColor;
 
-import { Picture } from 'astro:assets';
+import { Image } from "astro:assets";
 ---
 
 <style define:vars={{ highlightBookColor }}></style>
 
 <Layout {...book.data} title={`${book.data.title}, by ${book.data.bookAuthor} | Books You Could Read!`}>
 	<main>
-		<HeaderLink href={`/books#${(book.data.title).toLowerCase().replace(/\s+/g, '-')}`}`} class="back" title="Return to Books">
+		<HeaderLink href={`/books#${(book.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back" title="Return to Books">
 			<span></span>
 			<p>Check more books</p>
 		</HeaderLink>
@@ -57,6 +57,8 @@ import { Picture } from 'astro:assets';
 				</h1>
 
 				<div class="link_ctnr">
+					<a href="#" class="cta">Read more</a>
+
 					{book.data.youTubeLink ? (
 						<a href={book.data.youTubeLink} class="icon" target="_blank" title="Listen on YouTube">
 							<YouTube/>
@@ -75,26 +77,26 @@ import { Picture } from 'astro:assets';
 						</a>
 					) : null}
 				</div>
+
+				<p class="description">{book.data.description}</p>
 			</div>
+
 			{
 				book.data.coverImage ? (
-					// <img
-					// 	width={720}
-					// 	height={720}
-					// 	src={book.data.coverImage}
-					// 	alt="book-cover-art"
-					// />
-
-      				// <Image
-					// src={book.data.coverImage}
-					// alt={`${book.data.title}, by ${book.data.bookAuthor}`}
-					// width={400} height={400} format="image/webp"/>
-
-					<Picture src={book.data.coverImage} formats={['avif', 'webp']} width={400} height={400} alt={`${book.data.title}, by ${book.data.bookAuthor}`} />
+      				<Image
+					src={book.data.coverImage}
+					alt={`${book.data.title}, by ${book.data.bookAuthor}`}
+					width={400}
+					height={400}
+					loading="eager"
+					decoding="sync"
+					draggable="false" />
 				) : null
 			}
 		</div>
+
 		<!-- <FormattedDate date={pubDate} /> -->
+
 		{
 			book.data.updatedDate && (
 				<div class="last-updated-on">

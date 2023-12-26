@@ -41,15 +41,18 @@ main {
 }
 
 .books_list li hr {
-	width: 100%;
-	max-width: 24rem;
-	border: unset;
-	border-bottom: 0.2rem solid var(--light);
-	margin: 0 auto;
+    width: 100%;
+    max-width: 24rem;
+    height: 0.4rem;
+    border: unset;
+    margin: 0 auto;
+    background-image: linear-gradient(90deg, transparent, var(--light), transparent);
+    filter: drop-shadow(0rem 0.5rem 0.9rem var(--light-b));
 }
 
 .dark .books_list li hr {
-	border-bottom: 0.3rem solid var(--dark-b);
+    background-image: linear-gradient(85deg, transparent, var(--dark-b), transparent);
+    filter: drop-shadow(0rem -1.1rem 1.3rem #000);
 }
 
 .books_list li :global(time) {
