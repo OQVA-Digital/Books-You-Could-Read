@@ -43,7 +43,7 @@ main {
 .books_list li hr {
     width: 100%;
     max-width: 24rem;
-    height: 0.4rem;
+    height: 0.2rem;
     border: unset;
     margin: 0 auto;
     background-image: linear-gradient(90deg, transparent, var(--light), transparent);

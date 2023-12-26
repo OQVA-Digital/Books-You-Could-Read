@@ -14,21 +14,6 @@ main {
     text-shadow: 0.3rem 0.3rem #8882;
 }
 
-.intro h1 .red {
-    background-color: var(--light);
-    padding-inline: 0.6rem;
-    color: var(--c1);
-    border-radius: 3rem;
-    -webkit-border-radius: 3rem;
-    -moz-border-radius: 3rem;
-    -ms-border-radius: 3rem;
-    -o-border-radius: 3rem;
-}
-
-.dark .intro h1 .red {
-    background-color: var(--dark-b);
-}
-
 .intro h2 .red {
     color: var(--c1);
 }
