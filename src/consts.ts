@@ -11,10 +11,18 @@ export const OG_IMAGE = "/og.jpg"
 
 export const BRAND_NAME = "Books You Could Read"
 
-export const FACEBOOK_URL = "https://web.facebook.com/BooksYouCouldRead"
+export const FACEBOOK_URL = "https://www.facebook.com/BooksYouCouldRead"
 
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1"
 
-export const SPOTIFY_CHANNEL = ""
+export const INSTAGRAM_URL = "https://www.instagram.com/booksyoucouldread/"
 
-export const APPLE_CHANNEL = ""
+export const SPOTIFY_URL = ""
+
+export const APPLE_URL = ""
+
+export const TIKTOK_URL = "https://www.tiktok.com/@booksyoucouldread"
+
+export const TWITTER_URL = ""
+
+export const LEMON8_URL = ""

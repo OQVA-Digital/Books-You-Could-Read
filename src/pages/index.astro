@@ -16,6 +16,8 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 const books = (await getCollection('books')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() 
 );
+
+import { YOUTUBE_CHANNEL, SPOTIFY_URL, FACEBOOK_URL, INSTAGRAM_URL, APPLE_URL, TIKTOK_URL, TWITTER_URL, LEMON8_URL } from "../consts";
 ---
 
 <Layout>
@@ -23,35 +25,54 @@ const books = (await getCollection('books')).sort(
 		<section class="intro">
 			<div class="flex">
 				<div class="link_ctnr">
-					<a href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" class="youtube icon" target="_blank" title="YouTube">
-						<YouTube/>
-					</a>
+
+					{YOUTUBE_CHANNEL ? (
+						<a href={YOUTUBE_CHANNEL} class="youtube icon" target="_blank" title="Join us on YouTube">
+							<YouTube/>
+						</a>
+					) : null}
 					
-					<a href="" class="spotify icon" target="_blank" title="Spotify">
-						<Spotify/>
-					</a>
+					{SPOTIFY_URL ? (
+						<a href="" class="spotify icon" target="_blank" title="Join us on Spotify">
+							<Spotify/>
+						</a>
+					) : null}
 					
-					<a href="" class="apple_podcasts icon" target="_blank" title="Apple Podcasts">
-						<ApplePodcasts/>
-					</a>
+					{APPLE_URL ? (
+						<a href="" class="apple_podcasts icon" target="_blank" title="Join us on Apple Podcasts">
+							<ApplePodcasts/>
+						</a>
+					) : null}
+
+					{INSTAGRAM_URL ? (
+						<a href="https://www.instagram.com/booksyoucouldread/" class="instagram icon" target="_blank" title="Join us on Instagram">
+							<Instagram/>
+						</a>
+					) : null}
 					
-					<a href="https://www.instagram.com/booksyoucouldread/" class="instagram icon" target="_blank" title="Instagram">
-						<Instagram/>
-					</a>
+					{FACEBOOK_URL ? (
+						<a href="https://web.facebook.com/BooksYouCouldRead" class="facebook icon" target="_blank" title="Join us on Facebook">
+							<Facebook/>
+						</a>
+					) : null}
 					
-					<a href="https://web.facebook.com/BooksYouCouldRead" class="facebook icon" target="_blank" title="Facebook">
-						<Facebook/>
-					</a>
+					{TIKTOK_URL ? (
+						<a href="https://www.tiktok.com/@booksyoucouldread" class="tiktok icon" target="_blank" title="Join us on TikTok">
+							<TikTok/>
+						</a>
+					) : null}
 					
-					<a href="https://www.tiktok.com/@booksyoucouldread" class="tiktok icon" target="_blank" title="TikTok">
-						<TikTok/>
-					</a>
+
+					{TWITTER_URL ? (
+						<a href="https://twitter.com/BooksYCRead" class="twitter icon" target="_blank" title="Join us on Twitter">
+							<Twitter/>
+						</a>
+					) : null}
 					
-					<a href="https://twitter.com/BooksYCRead" class="twitter icon" target="_blank" title="Twitter">
-						<Twitter/>
-					</a>
-					
-					<a href="https://v.lemon8-app.com/s/yjmhpcyRR" class="lemon8 icon" target="_blank" title="Lemon8"></a>
+
+					{LEMON8_URL ? (
+						<a href="https://v.lemon8-app.com/s/yjmhpcyRR" class="lemon8 icon" target="_blank" title="Join us on Lemon8"></a>
+					) : null}
 				</div>
 				
 				<h1>Books You Could Read!</h1>

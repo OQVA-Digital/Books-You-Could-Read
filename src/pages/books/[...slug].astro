@@ -6,7 +6,7 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import HeaderLink from "../../components/HeaderLink.astro";
 import "../../styles/article.css";
 
-import { YOUTUBE_CHANNEL, SPOTIFY_CHANNEL, APPLE_CHANNEL } from "../../consts";
+import { YOUTUBE_CHANNEL, SPOTIFY_URL, APPLE_URL } from "../../consts";
 import YouTube from '../../components/svg/icons/YouTube.astro';
 import Spotify from '../../components/svg/icons/Spotify.astro';
 import ApplePodcasts from '../../components/svg/icons/ApplePodcasts.astro';
@@ -32,6 +32,8 @@ const books = (await getCollection('books')).sort(
 );
 
 const highlightBookColor = book.data.highlightColor;
+
+import { Image } from "astro:assets";
 ---
 
 <style define:vars={{ highlightBookColor }}></style>
@@ -76,12 +78,17 @@ const highlightBookColor = book.data.highlightColor;
 			</div>
 			{
 				book.data.coverImage ? (
-					<img
-						width={720}
-						height={720}
-						src={book.data.coverImage}
-						alt="book-cover-art"
-					/>
+					// <img
+					// 	width={720}
+					// 	height={720}
+					// 	src={book.data.coverImage}
+					// 	alt="book-cover-art"
+					// />
+					
+      				<Image
+					src={book.data.coverImage}
+					alt={`${book.data.title}, by ${book.data.bookAuthor}`}
+					width={400} height={400}/>
 				) : null
 			}
 		</div>
