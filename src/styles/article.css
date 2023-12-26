@@ -175,16 +175,19 @@ code {
     margin-top: -4rem;
 }
 
-.hero img {
-    margin-inline: auto;
+.hero picture {
     max-height: 100vh;
+}
+
+.hero img, .hero picture {
+    margin-inline: auto;
     object-fit: cover;
     width: 100%;
     object-position: top;
     background-color: var(--light);
 }
 
-html.dark .hero img {
+html.dark .hero img, html.dark .hero picture {
     background-color: var(--dark-b);
 }
 
@@ -447,10 +450,13 @@ html.dark .hero img {
         border-color: var(--dark-b);
     }
 
-    .hero img {
-        margin-inline: unset;
+    .hero picture {
         width: 50%;
         max-width: 80rem;
+    }
+
+    .hero img, .hero picture {
+        margin-inline: unset;
     }
 
     .heading_ctnr {

@@ -33,7 +33,7 @@ const books = (await getCollection('books')).sort(
 
 const highlightBookColor = book.data.highlightColor;
 
-import { Image } from "astro:assets";
+import { Picture } from 'astro:assets';
 ---
 
 <style define:vars={{ highlightBookColor }}></style>
@@ -85,10 +85,12 @@ import { Image } from "astro:assets";
 					// 	alt="book-cover-art"
 					// />
 
-      				<Image
-					src={book.data.coverImage}
-					alt={`${book.data.title}, by ${book.data.bookAuthor}`}
-					width={400} height={400} format="image/webp"/>
+      				// <Image
+					// src={book.data.coverImage}
+					// alt={`${book.data.title}, by ${book.data.bookAuthor}`}
+					// width={400} height={400} format="image/webp"/>
+
+					<Picture src={book.data.coverImage} formats={['avif', 'webp']} width={400} height={400} alt={`${book.data.title}, by ${book.data.bookAuthor}`} />
 				) : null
 			}
 		</div>
