@@ -33,7 +33,7 @@ html.dark p {
     font-size: clamp(1rem, 4.3vmin, 1.85rem);
 }
 
-main .back {
+.back.top {
     width: calc(clamp(4rem,11vmin,5rem) + var(--corner-width));
     height: 4rem;
     display: flex;
@@ -53,11 +53,11 @@ main .back {
     z-index: 1;
 }
 
-.dark main .back {
+.dark .back.top {
     background-color: var(--dark-b);
 }
 
-main .back span {
+.back.top span {
     width: 0.6rem;
     height: 0.6rem;
     border-top: solid var(--highlightBookColor, var(--c1));
@@ -77,7 +77,7 @@ main .back span {
     -o-transform: translateX(0.3rem) rotate(-45deg);
 }
 
-main .back:hover span {
+.back.top:hover span {
     border-top-color: var(--light-b);
     border-left-color: var(--light-b);
     transition: border-color 0s ease;
@@ -87,7 +87,7 @@ main .back:hover span {
     -o-transition: border-color 0s ease;
 }
 
-main .back p {
+.back.top p {
     padding: 0.3rem 0 0 1rem;
     font-size: 1.6rem;
     color: var(--highlightBookColor, var(--c1));
@@ -108,11 +108,11 @@ main .back p {
     width: max-content;
 }
 
-.dark main .back p {
+.dark .back.top p {
     font-weight: 350;
 }
 
-main .back:hover p {
+.back.top:hover p {
     transform: translateX(0rem);
     -webkit-transform: translateX(0rem);
     -moz-transform: translateX(0rem);
@@ -449,6 +449,41 @@ html.dark .hero img {
     -webkit-filter: brightness(1.1);
 }
 
+
+.back.down {
+    display: block;
+    margin: 5rem auto 14rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 650;
+    color: var(--dark-a);
+    background-color: var(--light);
+    width: fit-content;
+    padding: 1.4rem 2rem 0.8rem;
+    border-radius: 0.4rem;
+    line-height: 1;
+    box-shadow: 0 1.7rem 1rem -1.3rem var(--light-c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.back.down svg {
+    transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    width: 2rem;
+}
+
+.dark .back.down {
+    background-color: var(--dark-b);
+    color: var(--light-a);
+    font-weight: 350;
+    box-shadow: unset;
+}
 
 
 
