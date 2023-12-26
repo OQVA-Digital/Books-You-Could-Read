@@ -56,29 +56,31 @@ import { Image } from "astro:assets";
 					</span>
 				</h1>
 
-				<div class="link_ctnr">
-					<a href="#" class="cta">Read more</a>
-
-					{book.data.youTubeLink ? (
-						<a href={book.data.youTubeLink} class="icon" target="_blank" title="Listen on YouTube">
-							<YouTube/>
-						</a>
-					) : null}
-
-					{book.data.spotifyLink ? (
-						<a href={book.data.spotifyLink} class="icon" target="_blank" title="Listen on Spotify">
-							<Spotify/>
-						</a>
-					) : null}
-
-					{book.data.applePodcastsLink ? (
-						<a href={book.data.applePodcastsLink} class="icon" target="_blank" title="Listen on Apple Podcasts">
-							<ApplePodcasts/>
-						</a>
-					) : null}
-				</div>
+				{book.data.youTubeLink ? (
+					<div class="link_ctnr">
+						{book.data.youTubeLink ? (
+							<a href={book.data.youTubeLink} class="icon" target="_blank" title="Listen on YouTube">
+								<YouTube/>
+							</a>
+						) : null}
+	
+						{book.data.spotifyLink ? (
+							<a href={book.data.spotifyLink} class="icon" target="_blank" title="Listen on Spotify">
+								<Spotify/>
+							</a>
+						) : null}
+	
+						{book.data.applePodcastsLink ? (
+							<a href={book.data.applePodcastsLink} class="icon" target="_blank" title="Listen on Apple Podcasts">
+								<ApplePodcasts/>
+							</a>
+						) : null}
+					</div>
+				) : null}
 
 				<p class="description">{book.data.description}</p>
+
+				<a href="#read-more" class="cta">Read more</a>
 			</div>
 
 			{
@@ -105,7 +107,7 @@ import { Image } from "astro:assets";
 			)
 		}
 		<div class="content_ctnr">
-			<article>
+			<article id="read-more">
 				<Content />
 			</article>
 

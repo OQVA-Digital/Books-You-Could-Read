@@ -7,6 +7,10 @@ body {
 	background-color: var(--highlightBookColor, var(--c1));
 }
 
+article {
+    scroll-margin-top: 10rem;
+}
+
 article p {
     font-size: clamp(1.5rem,3.6vmin,2rem);
     font-weight: 370;
@@ -21,13 +25,12 @@ html.dark p {
     position: sticky;
     top: clamp(3rem, 16vw, 8rem);
     width: clamp(10rem, 85vw, 80rem);
-    margin: 7rem auto 5rem;
+    margin: 7rem auto -60rem;
     height: fit-content;
 }
 
-.heading_ctnr .description {
-    font-size: clamp(1rem, 4.3vmin, 1.9rem);
-    max-width: 61rem;
+.hero .description {
+    font-size: clamp(1rem, 4.3vmin, 1.85rem);
 }
 
 main .back {
@@ -123,12 +126,12 @@ main .back:hover p {
     font-weight: 300;
     line-height: 1.1;
     font-size: clamp(1rem, 14vmin, 7rem);
-    margin-bottom: 2.5rem;
     word-break: break-word;
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
     column-gap: 1rem;
+    margin-bottom: 2rem;
 }
 
 .hero .big .book_title {
@@ -178,6 +181,7 @@ code {
     flex-direction: column;
     margin-bottom: clamp(3rem, 10vw, 8rem);
     margin-top: -4rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .hero img {
@@ -187,10 +191,20 @@ code {
     width: 100%;
     object-position: top;
     background-color: var(--light);
+    margin-top: 65rem;
 }
 
 .hero .link_ctnr {
-    margin-bottom: 3rem;
+    margin-block: 2.4rem;
+}
+
+.hero .cta {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    display: inline-block;
+    text-decoration: underline;
+    text-underline-offset: 0.9rem;
+    text-decoration-color: var(--highlightBookColor, var(--c1));
 }
 
 html.dark .hero img {
@@ -460,6 +474,7 @@ html.dark .hero img {
         margin-inline: unset;
         width: 50%;
         max-width: 80rem;
+        margin-top: 0;
     }
 
     .heading_ctnr {
@@ -474,7 +489,8 @@ html.dark .hero img {
     }
 
     .hero .big .book_title {
-        font-size: clamp(1rem, 25vmin, 30rem);
+        font-size: clamp(1rem, 14vw, 30rem);
+        line-height: 0.9;
     }
 
     .authorship {
@@ -487,5 +503,9 @@ html.dark .hero img {
 
     .share {
         margin-left: 2rem;
+    }
+
+    .hero .description {
+        width: clamp(10rem, 33vw, 80rem);
     }
 }
