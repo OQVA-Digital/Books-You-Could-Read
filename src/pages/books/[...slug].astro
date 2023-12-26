@@ -84,11 +84,11 @@ import { Image } from "astro:assets";
 					// 	src={book.data.coverImage}
 					// 	alt="book-cover-art"
 					// />
-					
+
       				<Image
 					src={book.data.coverImage}
 					alt={`${book.data.title}, by ${book.data.bookAuthor}`}
-					width={400} height={400}/>
+					width={400} height={400} format="image/webp"/>
 				) : null
 			}
 		</div>
