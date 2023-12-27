@@ -88,24 +88,25 @@ html.dark p {
 }
 
 .back.top p {
-    padding: 0.3rem 0 0 1rem;
+    padding: 0.3rem 1rem 0 1rem;
     font-size: 1.6rem;
     color: var(--highlightBookColor, var(--c1));
     font-weight: 600;
-    transform: translate(-1rem);
-    -webkit-transform: translateX(-1rem);
-    -moz-transform: translateX(-1rem);
-    -ms-transform: translateX(-1rem);
-    -o-transform: translateX(-1rem);
     opacity: 0;
-    transition: transform .2s ease,opacity .1s ease;
-    -webkit-transition: transform .2s ease,opacity .1s ease;
-    -moz-transition: transform .2s ease,opacity .1s ease;
-    -ms-transition: transform .2s ease,opacity .1s ease;
-    -o-transition: transform .2s ease,opacity .1s ease;
+    transition: opacity 0.1s ease;
+    -webkit-transition: opacity 0.1s ease;
+    -moz-transition: opacity 0.1s ease;
+    -ms-transition: opacity 0.1s ease;
+    -o-transition: opacity 0.1s ease;
     position: absolute;
     left: 100%;
+    height: 100%;
     width: max-content;
+    display: flex;
+    align-items: center;
+    background-color: var(--light);
+    background-image: linear-gradient(45deg, rgb(245 245 245 / 60%), rgb(245 245 245 / 60%)), url(/noise.svg);
+    background-size: cover,clamp(38rem,150vw,100rem);
 }
 
 .dark .back.top p {
@@ -113,11 +114,6 @@ html.dark p {
 }
 
 .back.top:hover p {
-    transform: translateX(0rem);
-    -webkit-transform: translateX(0rem);
-    -moz-transform: translateX(0rem);
-    -ms-transform: translateX(0rem);
-    -o-transform: translateX(0rem);
     opacity: 1;
 }
 
