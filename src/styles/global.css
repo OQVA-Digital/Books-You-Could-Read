@@ -31,7 +31,7 @@ html.sr .reveal, html.sr .books_list li {
 	--light-c:#cccccc;
 
 	--dark:#1c1c1c;
-	--dark-a:#2c3539;
+	--dark-a:#26272a;
 	--dark-b:#222222;
 
 	--c1: crimson;
@@ -92,6 +92,41 @@ body {
     border: 0.7rem solid #000000;
 }
 
+.cta {
+    font-weight: 600;
+    font-size: clamp(1.6rem, 5.5vmin, 2.1rem);
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--dark-a);
+    border-radius: 0.4rem;
+    padding: 1.8rem 3rem 1.4rem;
+    line-height: 1;
+    background-color: var(--light);
+    transition:background-color 0.4s ease;
+    -webkit-transition:background-color 0.4s ease;
+    -moz-transition:background-color 0.4s ease;
+    -ms-transition:background-color 0.4s ease;
+    -o-transition:background-color 0.4s ease;
+}
+
+.cta:hover {
+    background-color: var(--light-c);
+    transition:background-color 0s ease;
+    -webkit-transition:background-color 0s ease;
+    -moz-transition:background-color 0s ease;
+    -ms-transition:background-color 0s ease;
+    -o-transition:background-color 0s ease;
+}
+
+.dark .cta {
+    background-color: var(--dark-b);
+    color: var(--light-a);
+    font-weight: 350;
+}
+
+.dark .cta:hover {
+    background-color: var(--dark-a);
+}
 
 .link_ctnr {
     display: flex;
@@ -393,6 +428,52 @@ button:not([type="submit"]):focus-visible {
     border: 0.1rem solid var(--dark-a);
 }
 
+
+.corner_bt {
+    position: fixed;
+    bottom:2rem;
+    width: 4.5rem;
+    z-index: 3;
+    height: 4.5rem;
+    border: 0.1rem solid var(--light-c);
+    background-color: var(--light-c);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -webkit-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -moz-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -ms-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    -o-transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+}
+
+.dark .corner_bt {
+    border: 0.1rem solid var(--dark-a);
+    background-color: var(--dark-b);
+}
+
+.corner_bt:hover  {
+    background-color: var(--light);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.dark .corner_bt:hover {
+    background-color: var(--dark-a);
+}
+
+.corner_bt svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
 
 
 

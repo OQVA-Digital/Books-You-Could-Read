@@ -1,0 +1,47 @@
+---
+    import Arrow from "./svg/icons/Arrow.astro";
+---
+
+<a href="#start" class="corner_bt back_to_top" title="back to top" aria-label="back to top">
+    <Arrow/>
+</a>
+
+<style>
+
+    .back_to_top {
+        right:var(--corner-width);
+    }
+
+    .back_to_top.show {
+        opacity:1;
+        visibility: visible;
+        transform:translateY(0);
+    }
+    
+    @media (min-width: 1080px) {
+
+        .back_to_top {
+            right: 2rem;
+        }
+    }
+</style>
+
+
+<script is:inline>
+	const backTopBt = document.querySelector('.back_to_top')
+
+	let scroll;
+	scroll = window.scrollY;
+
+	const windowHeight = window.innerHeight
+
+	window.addEventListener('scroll', function() {
+		scroll = window.scrollY;
+
+		if(scroll > windowHeight) {
+			backTopBt.classList.add('show')
+		} else {
+			backTopBt.classList.remove('show')
+		}
+	})
+</script>

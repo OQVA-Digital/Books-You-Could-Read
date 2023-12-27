@@ -11,7 +11,7 @@ main {
     font-size: clamp(3.5rem, 12vmin, 9rem);
     line-height: 1.2;
     font-weight: 500;
-    text-shadow: 0.3rem 0.3rem #8882;
+    /* text-shadow: 0.3rem 0.3rem #8882; */
 }
 
 .intro h2 .red {
@@ -53,11 +53,10 @@ main {
 }
 
 .intro .cta {
-    font-size: clamp(1.6rem, 5vw, 2.3rem);
     position: relative;
 }
 
-.intro .cta hr {
+.intro hr {
     height: 9vh;
     margin: 2rem auto;
     border: unset;
@@ -69,7 +68,7 @@ main {
     right: 0;
 }
 
-.dark .intro .cta hr {
+.dark .intro hr {
     background-color: var(--dark-a);
 }
 
@@ -112,24 +111,6 @@ main {
 .books .cta {
     margin-top: 4rem;
     display: block;
-    font-size: clamp(1.6rem, 5.5vmin, 2.1rem);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 0.7rem;
-    transition: color 0.5s ease;
-    -webkit-transition: color 0.5s ease;
-    -moz-transition: color 0.5s ease;
-    -ms-transition: color 0.5s ease;
-    -o-transition: color 0.5s ease;
-}
-
-.books .cta:hover {
-    color: var(--light-b);
-    transition: color 0s ease;
-    -webkit-transition: color 0s ease;
-    -moz-transition: color 0s ease;
-    -ms-transition: color 0s ease;
-    -o-transition: color 0s ease;
 }
 
 
