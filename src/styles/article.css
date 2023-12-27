@@ -111,6 +111,8 @@ html.dark p {
 
 .dark .back.top p {
     font-weight: 350;
+    background-color: #1c1c1c;
+    background-image: linear-gradient(45deg, rgb(20 20 20 / 90%), rgb(20 20 20 / 90%)), url(/noise.svg);
 }
 
 .back.top:hover p {

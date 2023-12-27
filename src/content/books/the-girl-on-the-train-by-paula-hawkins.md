@@ -1,14 +1,7 @@
 ---
 title: The Girl on the Train
 bookAuthor: Paula Hawkins
-description: "'The Alchemist', the book that made millions dream of digging up
-  their backyard in pursuit of hidden treasure. Paulo Coelho's international
-  sensation has become a modern classic, inspiring countless readers with its
-  philosophical musings and spiritual guidance. But let's not forget the journey
-  of Santiago, the young shepherd with big dreams and an even bigger heart. With
-  over 150 million copies sold, 'The Alchemist' has certainly earned its place
-  in the literary canon. So, let's dive in and see what insights we can find in
-  this beloved tale."
+description: ""
 pubDate: Jun 01 2023
 coverImage: /book-covers/4-the-alchemist-by-paulo-coelho.jpg
 affiliateLink: ""

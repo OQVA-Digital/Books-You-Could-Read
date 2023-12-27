@@ -78,7 +78,9 @@ import { Image } from "astro:assets";
 					</div>
 				) : null}
 
-				<p set:html={book.data.description} class="description"></p>
+				{book.data.description ? (
+					<p set:html={book.data.description} class="description"></p>
+				) : null}
 
 				<a href="#read-more" class="cta">Read more</a>
 			</div>
