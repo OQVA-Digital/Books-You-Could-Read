@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 import "../../styles/books.css"
+import BackTop from '../../components/BackTop.astro';
 
 // const books = (await getCollection('books')).sort(
 //   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -37,6 +38,8 @@ const book = Astro.props;
 			</ul>
 		</section>
 	</main>
+
+	<BackTop/>
 </Layout>
 
 <style>

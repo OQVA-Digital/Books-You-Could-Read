@@ -2,7 +2,7 @@
     import Arrow from "./svg/icons/Arrow.astro";
 ---
 
-<a href="#start" class="corner_bt back_to_top" title="back to top" aria-label="back to top">
+<a href="#" class="corner_bt back_to_top" title="back to top" aria-label="back to top">
     <Arrow/>
 </a>
 
@@ -10,6 +10,9 @@
 
     .back_to_top {
         right:var(--corner-width);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(1rem);
     }
 
     .back_to_top.show {
@@ -33,10 +36,10 @@
 	let scroll;
 	scroll = window.scrollY;
 
-	const windowHeight = window.innerHeight
+	const windowHeight = window.innerHeight;
 
 	window.addEventListener('scroll', function() {
-		scroll = window.scrollY;
+		let scroll = window.scrollY;
 
 		if(scroll > windowHeight) {
 			backTopBt.classList.add('show')
