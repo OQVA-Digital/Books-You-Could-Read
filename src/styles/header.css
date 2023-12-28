@@ -49,12 +49,6 @@ html.dark nav {
     /* position: fixed; */
     z-index: 3;
 }
-.logo img {
-}
-
-h2 {
-    margin: 0.5em 0;
-}
 
 nav {
     display: none;
