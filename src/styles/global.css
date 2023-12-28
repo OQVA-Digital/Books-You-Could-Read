@@ -621,14 +621,18 @@ noscript {
 #themeToggle {
     background: none;
     position: absolute;
-    right: clamp(0.5rem,1.6vw,1.8rem);
-    top: clamp(0.5rem,1.6vw,1.8rem);
+    right: clamp(0.5rem,1.8vw,1.8rem);
+    top: clamp(0.5rem,1.8vw,1.8rem);
     cursor: pointer;
-    width: clamp(2rem,5.2vw,2.5rem);
-    height: clamp(2rem,5.2vw,2.5rem);
+    width: clamp(2rem,5.3vw,2.5rem);
+    height: clamp(2rem,5.3vw,2.5rem);
     color: var(--dark-b);
-  }
+}
 
-  .dark #themeToggle {
+.dark #themeToggle {
     color: var(--light-c);
-  }
+}
+
+#themeToggle:hover {
+    opacity: 0.4;
+}
