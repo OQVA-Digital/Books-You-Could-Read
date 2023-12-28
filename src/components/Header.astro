@@ -21,22 +21,22 @@ import '../styles/header.css'
 
 			<HeaderLink href="/books">Books</HeaderLink>
 
-			<!-- <HeaderLink href="/about">About</HeaderLink> -->
+			<hr>
 
 			{YOUTUBE_CHANNEL ? (
-				<HeaderLink href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" target="_blank" class="external">
+				<HeaderLink href="https://www.youtube.com/channel/UCb63wW2bTBDtfVKuXtzw-MQ?sub_confirmation=1" target="_blank" class="social external">
 					YouTube
 				</HeaderLink>
 			) : null}
 
 			{SPOTIFY_URL ? (
-				<HeaderLink href="#" target="_blank" class="external">
+				<HeaderLink href="#" target="_blank" class="social external">
 					Spotify
 				</HeaderLink>
 			) : null}
 
 			{APPLE_URL ? (
-				<HeaderLink href="#" target="_blank" class="external">
+				<HeaderLink href="#" target="_blank" class="social external">
 					iTunes
 				</HeaderLink>
 			) : null}

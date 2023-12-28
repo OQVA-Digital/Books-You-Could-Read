@@ -43,14 +43,14 @@ html.dark nav {
 }
 
 
-.logo {
+header .logo {
     width: clamp(4rem,11vmin,5rem);
     height: clamp(4rem,11vmin,5rem);
     /* position: fixed; */
     z-index: 3;
 }
 
-nav {
+header nav {
     display: none;
     flex-direction: column;
     background-color: var(--light);
@@ -65,12 +65,35 @@ nav {
     z-index: 2;
 }
 
-nav a {
+header nav hr {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: var(--light-c);
+    transform: rotate(45deg);
+    margin-block: 1.5rem;
+}
+
+.dark header nav hr {
+    background-color: var(--dark-a);
+}
+
+header nav a {
     padding: 1rem 1.6rem;
     line-height: 1;
 }
 
-nav.show {
+header nav a.social {
+    font-size: 0.9em;
+    font-weight: 620;
+    color: var(--light-b);
+}
+
+.dark header nav a.social {
+    color: var(--light-c);
+    font-weight: 500;
+}
+
+header nav.show {
     display: flex;
 }
 
@@ -139,7 +162,7 @@ nav.show {
         border-color:var(--dark-b)
     }
 
-    nav {
+    header nav {
         display: flex;
         position: relative;
         border-bottom: unset;
@@ -148,18 +171,35 @@ nav.show {
         background-color:transparent;
     }
 
-    nav a {
+    header nav hr {
+        margin-block: unset;
+        margin-inline: 3rem;
+    }
+
+    header nav a {
         padding:1rem 1.6rem 0.8rem;
         border-radius: 0.3rem;
+        -webkit-border-radius: 0.3rem;
+        -moz-border-radius: 0.3rem;
+        -ms-border-radius: 0.3rem;
+        -o-border-radius: 0.3rem;
         transition: background-color 0.4s ease;
-    }
+        -webkit-transition: background-color 0.4s ease;
+        -moz-transition: background-color 0.4s ease;
+        -ms-transition: background-color 0.4s ease;
+        -o-transition: background-color 0.4s ease;
+}
 
-    nav a:hover {
+    header nav a:hover {
         background-color:var(--light);
         transition: background-color 0.1s ease;
-    }
+        -webkit-transition: background-color 0.1s ease;
+        -moz-transition: background-color 0.1s ease;
+        -ms-transition: background-color 0.1s ease;
+        -o-transition: background-color 0.1s ease;
+}
 
-    html.dark nav a:hover {
+    html.dark header nav a:hover {
         background-color:var(--dark-b);
     }
 
@@ -167,7 +207,7 @@ nav.show {
         display: none;
     }
 
-    html.dark nav {
+    html.dark header nav {
         background-color:transparent;
     }
 }
